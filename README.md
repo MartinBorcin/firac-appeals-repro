@@ -3,8 +3,9 @@
 This repository accompanies the FIRAC Appeals paper. It contains the minimal
 code, prompts, configs, and tiny fixtures needed to run the FIRAC annotation
 framework and reproduce evaluation workflows. It intentionally does not include
-run artefacts, raw corpora, generated paper reports, Slurm scripts, SQLite
-stores, logs, or local cluster utilities.
+run artefacts, raw corpora, generated paper reports, orchestration scripts, logs, or local cluster utilities.
+
+<img width="3269" height="861" alt="FIRAC_dataset_paper_figure-2" src="https://github.com/user-attachments/assets/eb0971ad-6275-44b1-a46f-53aeb0e75a72" />
 
 ## Installation
 
