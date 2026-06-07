@@ -1,0 +1,38 @@
+run:
+  overwrite: false
+  continue_on_error: true
+  final_filename: final.jsonl
+
+backend:
+  name: mock
+  model: mock
+  base_url: http://mock.local/v1
+  max_tokens: 512
+
+scheduler:
+  max_case_concurrency: 2
+  max_in_flight_requests: 2
+  max_retries: 0
+  max_validation_retries: 0
+
+stage_max_tokens:
+  metadata_ner: 512
+  issue_analyst: 512
+  legal_researcher: 512
+  logician: 512
+  firac_judge: 512
+  firac_verifier: 512
+
+prompts:
+  metadata_ner: prompts/annotation/v2/metadata_ner.md
+  legal_researcher: prompts/annotation/v2/legal_researcher.md
+  issue_analyst: prompts/annotation/v2/issue_analyst.md
+  logician: prompts/annotation/v2/logician.md
+  firac_judge: prompts/annotation/v2/firac_judge.md
+  firac_verifier: prompts/annotation/v2/firac_verifier.md
+
+output:
+  save_intermediates: false
+  save_prompts: false
+  write_case_files: true
+  log_level: INFO

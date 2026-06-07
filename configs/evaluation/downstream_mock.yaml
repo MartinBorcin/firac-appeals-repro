@@ -1,0 +1,25 @@
+backend:
+  name: mock
+  model: mock
+  base_url: http://mock.local/v1
+  max_tokens: 512
+
+prompts:
+  outcome_prediction: prompts/downstream/v1/outcome_prediction.md
+  issue_generation: prompts/downstream/v1/issue_generation.md
+  rule_recommendation: prompts/downstream/v1/rule_recommendation.md
+
+scheduler:
+  max_case_concurrency: 2
+  max_in_flight_requests: 2
+  max_retries: 0
+  max_validation_retries: 0
+
+max_tokens: 512
+overwrite: false
+continue_on_error: true
+log_level: INFO
+
+output:
+  save_intermediates: false
+  write_case_files: true

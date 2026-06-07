@@ -1,0 +1,18 @@
+metrics:
+  - rouge1_f1
+  - rouge2_f1
+  - rougeL_f1
+  - bertscore_f1
+  - compression_ratio
+  - reference_length_ratio
+  - novel_unigrams
+  - novel_bigrams
+  - novel_trigrams
+  - extractive_coverage
+  - extractive_density
+fields:
+  source: judgment_text
+  prediction: firac_inabs_headnote
+  reference: reference_summary
+summary_variant: firac_inabs_headnote
+split: test

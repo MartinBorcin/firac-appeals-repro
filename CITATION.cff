@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "FIRAC Appeals Reproducibility Package"
+message: "If you use this code, please cite the FIRAC Appeals paper and dataset release."
+type: software
+authors:
+  - family-names: "FIRAC Appeals contributors"
+version: 0.1.0
+license: MIT
