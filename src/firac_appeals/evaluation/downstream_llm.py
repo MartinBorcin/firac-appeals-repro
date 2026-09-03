@@ -12,6 +12,7 @@ from firac_appeals.annotation.client import AsyncScheduler, LLMRequest, build_cl
 from firac_appeals.annotation.json_parse import parse_jsonish
 from firac_appeals.annotation.prompts import PromptStore
 from firac_appeals.annotation.pipeline import build_retry_prompt, configure_logger
+from firac_appeals.storage.run_store import store_from_output_config
 from firac_appeals.utils.io import append_jsonl, ensure_parent
 
 
@@ -19,7 +20,7 @@ class OutcomePrediction(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     label: str
-    rationale: str = ""
+    rationale: str = Field(default="", max_length=1000)
 
     @field_validator("label")
     @classmethod
@@ -148,8 +149,8 @@ class DownstreamLLMRunner:
             self.output_dir / f"{task}.log",
             config.get("log_level", "INFO"),
         )
-        self.write_case_files = bool(config.get("output", {}).get("write_case_files", True))
-        self.save_intermediates = bool(config.get("output", {}).get("save_intermediates", False))
+        self.store = store_from_output_config(self.output_dir, config.setdefault("output", {}))
+        self.write_case_files = bool(config.get("output", {}).get("write_case_files", self.store is None))
         self.client = build_client(config["backend"])
         self.scheduler = AsyncScheduler(self.client, config.get("scheduler", {}), logger=self.logger)
         self.max_validation_retries = int(config.get("scheduler", {}).get("max_validation_retries", 1))
@@ -185,10 +186,13 @@ class DownstreamLLMRunner:
                     "prediction_status": "error",
                     "prediction_error": repr(exc),
                 }
-                ensure_parent(self.output_dir / "errors" / f"{case_id}.json").write_text(
-                    json.dumps(result, ensure_ascii=False, indent=2),
-                    encoding="utf-8",
-                )
+                if self.store:
+                    self.store.put_json("case_error", case_id, "error", result)
+                else:
+                    ensure_parent(self.output_dir / "errors" / f"{case_id}.json").write_text(
+                        json.dumps(result, ensure_ascii=False, indent=2),
+                        encoding="utf-8",
+                    )
                 if not self.config.get("continue_on_error", True):
                     raise
                 return result
@@ -204,6 +208,10 @@ class DownstreamLLMRunner:
     async def run_one(self, row: dict[str, Any]) -> dict[str, Any]:
         case_id = str(row.get("case_id", ""))
         done_path = self.output_dir / "cases" / f"{case_id}.json"
+        stored = self.store.get_json("prediction", case_id, self.task) if self.store else None
+        if stored and not self.overwrite:
+            self.logger.info("case_skip_done case_id=%s", case_id)
+            return stored | {"_skipped_existing": True}
         if done_path.exists() and not self.overwrite:
             self.logger.info("case_skip_done case_id=%s", case_id)
             return json.loads(done_path.read_text(encoding="utf-8")) | {"_skipped_existing": True}
@@ -216,6 +224,8 @@ class DownstreamLLMRunner:
             "model": self.config["backend"].get("model", ""),
             **prediction,
         }
+        if self.store:
+            self.store.put_json("prediction", case_id, self.task, result)
         if self.write_case_files:
             ensure_parent(done_path).write_text(
                 json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True),
@@ -238,7 +248,14 @@ class DownstreamLLMRunner:
             )
             started = time.monotonic()
             max_tokens = self.task_max_tokens.get(self.task, self.max_tokens)
-            response = await self.scheduler.run_one(LLMRequest(case_id, stage, prompt, max_tokens=max_tokens))
+            request = LLMRequest(case_id, stage, prompt, max_tokens=max_tokens)
+            if self.config["backend"].get("structured_output", False):
+                request.extra_payload["response_format"] = response_format_for(
+                    schema,
+                    self.task,
+                    self.config.get("evaluation", {}).get("outcome_labels"),
+                )
+            response = await self.scheduler.run_one(request)
             elapsed = time.monotonic() - started
             self.logger.info(
                 "stage_response case_id=%s stage=%s attempt=%d response_chars=%d reasoning_chars=%d elapsed_sec=%.2f",
@@ -249,10 +266,12 @@ class DownstreamLLMRunner:
                 len(response.reasoning),
                 elapsed,
             )
-            save_raw(self.output_dir, case_id, stage, response.text, self.save_intermediates)
+            save_raw(self.output_dir, self.store, case_id, stage, response.text)
             try:
                 parsed = parse_jsonish(response.text)
-                return schema.model_validate(parsed).model_dump(mode="json")
+                prediction = schema.model_validate(parsed).model_dump(mode="json")
+                self.validate_task_constraints(prediction)
+                return prediction
             except Exception as exc:  # noqa: BLE001
                 last_error = repr(exc)
                 self.logger.warning(
@@ -265,13 +284,46 @@ class DownstreamLLMRunner:
                 prompt = build_retry_prompt(prompt, response.text, last_error)
         raise ValueError(f"{self.task} did not produce valid structured output after retries: {last_error}")
 
+    def validate_task_constraints(self, prediction: dict[str, Any]) -> None:
+        if self.task != "outcome_prediction":
+            return
+        configured = self.config.get("evaluation", {}).get("outcome_labels")
+        if not configured:
+            return
+        allowed = {str(label).lower().strip() for label in configured}
+        label = str(prediction.get("label", "")).lower().strip()
+        if label not in allowed:
+            choices = ", ".join(sorted(allowed))
+            raise ValueError(f"label must be one of the configured outcome labels: {choices}")
+
 
 def build_task_prompt(prompt_store: PromptStore, task: str, row: dict[str, Any]) -> str:
     input_text = str((row.get("input") or {}).get("input_text", ""))
     return prompt_store.render(task, input_text=input_text)
 
 
-def save_raw(output_dir: Path, case_id: str, stage: str, text: str, enabled: bool) -> None:
-    if not enabled:
+def response_format_for(
+    schema: type[BaseModel],
+    task: str,
+    outcome_labels: list[str] | None = None,
+) -> dict[str, Any]:
+    json_schema = schema.model_json_schema()
+    if task == "outcome_prediction" and outcome_labels:
+        json_schema["properties"]["label"]["enum"] = [
+            str(label).lower().strip() for label in outcome_labels
+        ]
+    return {
+        "type": "json_schema",
+        "json_schema": {
+            "name": f"{task}_response",
+            "schema": json_schema,
+            "strict": True,
+        },
+    }
+
+
+def save_raw(output_dir: Path, store: Any, case_id: str, stage: str, text: str) -> None:
+    if store:
+        store.put_text("artifact", case_id, f"{stage}.response", text)
         return
     ensure_parent(output_dir / "intermediates" / case_id / f"{stage}.txt").write_text(text, encoding="utf-8")

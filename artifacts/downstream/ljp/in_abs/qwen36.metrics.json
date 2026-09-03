@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "accuracy": 0.6632653061224489,
+    "label_distribution": {
+      "allowed": 48,
+      "dismissed": 50
+    },
+    "macro_f1": 0.6572337042925278,
+    "prediction_distribution": {
+      "allowed": 37,
+      "dismissed": 61
+    }
+  },
+  "count": 98,
+  "predictions": "runs/evaluations/downstream/zero_shot_binary/qwen36_27b_seed20260604/outcome_prediction/predictions.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test_binary/outcome_prediction.jsonl",
+  "task": "outcome_prediction"
+}

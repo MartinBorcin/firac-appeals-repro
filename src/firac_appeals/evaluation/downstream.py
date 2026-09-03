@@ -9,7 +9,7 @@ from typing import Any
 
 
 TOKEN_RE = re.compile(r"[A-Za-z0-9]+")
-RULE_RANK_CUTOFFS = (1, 3, 5, 10, 20, 50)
+RULE_RANK_CUTOFFS = (1, 3, 5, 10, 20, 50, 100)
 
 
 def build_task_examples(rows: list[dict[str, Any]], task: str) -> list[dict[str, Any]]:

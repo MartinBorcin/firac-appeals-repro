@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "accuracy": 0.5612244897959183,
+    "label_distribution": {
+      "allowed": 48,
+      "dismissed": 50
+    },
+    "macro_f1": 0.5574923868528825,
+    "prediction_distribution": {
+      "allowed": 41,
+      "dismissed": 57
+    }
+  },
+  "count": 98,
+  "predictions": "runs/evaluations/downstream/zero_shot_binary/mistral_small_3_2_24b_seed20260604/outcome_prediction/predictions.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test_binary/outcome_prediction.jsonl",
+  "task": "outcome_prediction"
+}

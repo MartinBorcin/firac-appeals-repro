@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "firac-appeals-repro"
-version = "0.1.0"
-description = "Minimal reproducibility package for FIRAC Appeals annotation and evaluation."
+version = "0.2.0"
+description = "Reproducibility package for FIRAC Appeals annotation, evaluation, and paper results."
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
@@ -21,8 +21,15 @@ dependencies = [
 eval = [
   "bert-score==0.3.4",
   "numpy>=1.24",
+  "pandas>=2.0",
   "scikit-learn>=1.4",
+  "scipy>=1.10",
   "sentence-transformers>=3.0",
+  "statsmodels>=0.14",
+]
+train = [
+  "torch>=2.2",
+  "transformers>=4.45",
 ]
 
 [project.scripts]
@@ -35,9 +42,6 @@ firac-run-baseline = "firac_appeals.cli.run_baseline:main"
 firac-run-llm-eval = "firac_appeals.cli.run_llm_eval:main"
 firac-score-predictions = "firac_appeals.cli.score_predictions:main"
 firac-score-summaries = "firac_appeals.cli.score_summaries:main"
-firac-run-rubric = "firac_appeals.cli.run_rubric:main"
-firac-compare-rubric = "firac_appeals.cli.compare_rubric:main"
-firac-make-results = "firac_appeals.cli.make_results:main"
 
 [dependency-groups]
 dev = [

@@ -1,0 +1,19 @@
+{
+  "aggregate": {
+    "accuracy": 0.7411504424778761,
+    "label_distribution": {
+      "allowed": 1015,
+      "dismissed": 341
+    },
+    "macro_f1": 0.29988087030340554,
+    "prediction_distribution": {
+      "": 5,
+      "allowed": 1328,
+      "dismissed": 23
+    }
+  },
+  "count": 1356,
+  "predictions": "runs/evaluations/downstream/sc_test_zero_shot_binary_20260813/saul_7b/outcome_prediction/predictions.jsonl",
+  "references": "runs/evaluations/downstream/sc_test_temporal_20240701_binary/outcome_prediction.jsonl",
+  "task": "outcome_prediction"
+}

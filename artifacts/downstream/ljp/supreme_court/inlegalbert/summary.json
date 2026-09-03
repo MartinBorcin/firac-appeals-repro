@@ -1,0 +1,80 @@
+{
+  "aggregate": {
+    "accuracy": {
+      "mean": 0.7699115044247787,
+      "std": 0.012184890591340923
+    },
+    "macro_f1": {
+      "mean": 0.699847750806194,
+      "std": 0.010564474427707013
+    },
+    "mcc": {
+      "mean": 0.4004160654983193,
+      "std": 0.020219503168159486
+    }
+  },
+  "dataset": "supreme_court",
+  "model": "law-ai/InLegalBERT",
+  "per_seed": [
+    {
+      "accuracy": 0.7706489675516224,
+      "best_epoch": 3,
+      "label_distribution": {
+        "allowed": 1015,
+        "dismissed": 341
+      },
+      "macro_f1": 0.6980217126825352,
+      "mcc": 0.39613895671140203,
+      "metrics": "runs/evaluations/downstream/fine_tuned/inlegalbert/supreme_court/seed_20260604/metrics.json",
+      "prediction_distribution": {
+        "allowed": 1006,
+        "dismissed": 350
+      },
+      "seed": 20260604,
+      "validation_macro_f1": 0.7165208772749492
+    },
+    {
+      "accuracy": 0.7817109144542773,
+      "best_epoch": 3,
+      "label_distribution": {
+        "allowed": 1015,
+        "dismissed": 341
+      },
+      "macro_f1": 0.7112062142583729,
+      "mcc": 0.4224319452572759,
+      "metrics": "runs/evaluations/downstream/fine_tuned/inlegalbert/supreme_court/seed_20260605/metrics.json",
+      "prediction_distribution": {
+        "allowed": 1011,
+        "dismissed": 345
+      },
+      "seed": 20260605,
+      "validation_macro_f1": 0.727882023585436
+    },
+    {
+      "accuracy": 0.7573746312684366,
+      "best_epoch": 3,
+      "label_distribution": {
+        "allowed": 1015,
+        "dismissed": 341
+      },
+      "macro_f1": 0.6903153254776739,
+      "mcc": 0.38267729452628,
+      "metrics": "runs/evaluations/downstream/fine_tuned/inlegalbert/supreme_court/seed_20260606/metrics.json",
+      "prediction_distribution": {
+        "allowed": 972,
+        "dismissed": 384
+      },
+      "seed": 20260606,
+      "validation_macro_f1": 0.7331952412864409
+    }
+  ],
+  "seeds": [
+    20260604,
+    20260605,
+    20260606
+  ],
+  "test": "runs/evaluations/downstream/sc_test_temporal_20240701_binary/outcome_prediction.jsonl",
+  "test_count": 1356,
+  "train": "runs/evaluations/downstream/sc_train_temporal_20240701_binary/outcome_prediction.jsonl",
+  "train_count": 34697
+}

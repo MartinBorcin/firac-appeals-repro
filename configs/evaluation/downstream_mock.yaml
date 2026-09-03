@@ -5,7 +5,7 @@ backend:
   max_tokens: 512
 
 prompts:
-  outcome_prediction: prompts/downstream/v1/outcome_prediction.md
+  outcome_prediction: prompts/downstream/v2/outcome_prediction_binary.md
   issue_generation: prompts/downstream/v1/issue_generation.md
   rule_recommendation: prompts/downstream/v1/rule_recommendation.md
 
@@ -19,6 +19,9 @@ max_tokens: 512
 overwrite: false
 continue_on_error: true
 log_level: INFO
+
+evaluation:
+  outcome_labels: [allowed, dismissed]
 
 output:
   save_intermediates: false

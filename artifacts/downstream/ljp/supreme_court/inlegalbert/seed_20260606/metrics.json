@@ -1,0 +1,40 @@
+{
+  "aggregate": {
+    "accuracy": 0.7573746312684366,
+    "label_distribution": {
+      "allowed": 1015,
+      "dismissed": 341
+    },
+    "macro_f1": 0.6903153254776739,
+    "mcc": 0.38267729452628,
+    "prediction_distribution": {
+      "allowed": 972,
+      "dismissed": 384
+    }
+  },
+  "best_epoch": 3,
+  "count": 1356,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6400558481023448,
+      "validation_macro_f1": 0.6944037741173927
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5437777603625275,
+      "validation_macro_f1": 0.7098161710235387
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.46694087336358964,
+      "validation_macro_f1": 0.7331952412864409
+    }
+  ],
+  "model": "law-ai/InLegalBERT",
+  "predictions": "runs/evaluations/downstream/fine_tuned/inlegalbert/supreme_court/seed_20260606/predictions.jsonl",
+  "references": "runs/evaluations/downstream/sc_test_temporal_20240701_binary/outcome_prediction.jsonl",
+  "seed": 20260606,
+  "task": "outcome_prediction",
+  "validation_macro_f1": 0.7331952412864409
+}

@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "gold_issue_count": 1.54,
+    "issue_avg_best_token_f1": 0.5502324955066701,
+    "issue_exact_f1": 0.0,
+    "issue_exact_precision": 0.0,
+    "issue_exact_recall": 0.0,
+    "issue_semantic_avg_best_cosine": 0.7590262547135354,
+    "issue_semantic_f1": 0.756517927507969,
+    "issue_semantic_precision": 0.7364943647384643,
+    "issue_semantic_recall": 0.7815581446886063,
+    "predicted_issue_count": 2.19
+  },
+  "count": 100,
+  "predictions": "runs/evaluations/downstream/zero_shot/qwen36_27b_seed20260606/issue_generation/predictions.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test/issue_generation.jsonl",
+  "task": "issue_generation"
+}

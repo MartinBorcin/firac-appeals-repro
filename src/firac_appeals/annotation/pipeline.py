@@ -14,6 +14,7 @@ from firac_appeals.annotation.json_parse import parse_jsonish
 from firac_appeals.annotation.prompts import PromptStore
 from firac_appeals.schema.models import canonical_outcome
 from firac_appeals.schema.validation import validate_stage
+from firac_appeals.storage.run_store import store_from_output_config
 from firac_appeals.utils.io import append_jsonl, ensure_parent
 
 
@@ -31,16 +32,18 @@ class FiracPipeline:
         self.scheduler = AsyncScheduler(self.client, config.get("scheduler", {}), logger=self.logger)
         self.overwrite = bool(config.get("run", {}).get("overwrite", False))
         output_config = config.setdefault("output", {})
-        self.save_intermediates = bool(output_config.get("save_intermediates", False))
+        self.store = store_from_output_config(self.output_dir, output_config)
+        self.save_intermediates = bool(output_config.get("save_intermediates", True))
         self.save_prompts = bool(output_config.get("save_prompts", False))
-        self.write_case_files = bool(output_config.get("write_case_files", True))
+        self.write_case_files = bool(output_config.get("write_case_files", self.store is None))
         self.max_validation_retries = int(config.get("scheduler", {}).get("max_validation_retries", 1))
         self.stage_max_tokens = config.get("stage_max_tokens", {})
         self.stages = config.get("stages", {})
         self.logger.info(
-            "Initialized FIRAC pipeline output_dir=%s overwrite=%s write_case_files=%s",
+            "Initialized FIRAC pipeline output_dir=%s overwrite=%s artifact_store=%s write_case_files=%s",
             self.output_dir,
             self.overwrite,
+            self.store.path if self.store else "files",
             self.write_case_files,
         )
 
@@ -50,6 +53,10 @@ class FiracPipeline:
     def is_done(self, case_id: str) -> bool:
         if self.overwrite:
             return False
+        if self.store:
+            data = self.store.get_json("case_result", case_id, "result")
+            if data and data.get("firac"):
+                return True
         path = self.done_path(case_id)
         if not path.exists():
             return False
@@ -207,12 +214,18 @@ class FiracPipeline:
     def _save_raw(self, case_id: str, stage: str, text: str) -> None:
         if not self.save_intermediates:
             return
+        if self.store:
+            self.store.put_text("artifact", case_id, f"{stage}.response", text)
+            return
         path = self.output_dir / "intermediates" / case_id / f"{stage}.txt"
         ensure_parent(path)
         path.write_text(text, encoding="utf-8")
 
     def _save_reasoning(self, case_id: str, stage: str, text: str) -> None:
         if not (self.save_intermediates and text):
+            return
+        if self.store:
+            self.store.put_text("artifact", case_id, f"{stage}.reasoning", text)
             return
         path = self.output_dir / "intermediates" / case_id / f"{stage}.reasoning.txt"
         ensure_parent(path)
@@ -221,16 +234,25 @@ class FiracPipeline:
     def _save_prompt(self, case_id: str, stage: str, prompt: str) -> None:
         if not (self.save_intermediates and self.save_prompts):
             return
+        if self.store:
+            self.store.put_text("artifact", case_id, f"{stage}.prompt", prompt)
+            return
         path = self.output_dir / "intermediates" / case_id / f"{stage}.prompt.txt"
         ensure_parent(path)
         path.write_text(prompt, encoding="utf-8")
 
     def _save_case_result(self, case_id: str, result: dict[str, Any]) -> None:
+        if self.store:
+            self.store.put_json("case_result", case_id, "result", result)
         if self.write_case_files:
             ensure_parent(self.done_path(case_id))
             self.done_path(case_id).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
     def _load_case_result(self, case_id: str) -> dict[str, Any]:
+        if self.store:
+            data = self.store.get_json("case_result", case_id, "result")
+            if data:
+                return data
         return json.loads(self.done_path(case_id).read_text(encoding="utf-8"))
 
     async def annotate_many(self, cases: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -253,9 +275,12 @@ class FiracPipeline:
             except Exception as exc:  # noqa: BLE001
                 self.logger.exception("case_error case_id=%s error=%r", case_id, exc)
                 result = {**case, "annotation_status": "error", "error": repr(exc)}
-                path = self.output_dir / "errors" / f"{case_id}.json"
-                ensure_parent(path)
-                path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+                if self.store:
+                    self.store.put_json("case_error", case_id, "error", result)
+                else:
+                    path = self.output_dir / "errors" / f"{case_id}.json"
+                    ensure_parent(path)
+                    path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
                 if not self.config.get("run", {}).get("continue_on_error", True):
                     raise
                 return result

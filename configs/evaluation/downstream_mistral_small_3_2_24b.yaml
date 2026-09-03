@@ -1,0 +1,55 @@
+backend:
+  name: openai_compatible
+  base_url: "${OPENAI_BASE_URL}"
+  api_key_env: OPENAI_API_KEY
+  model: mistral-small-3.2-24b-instruct
+  system_prompt: "You are an Indian legal expert. Complete the task using only the provided input and return only valid JSON."
+  timeout_seconds: 600
+  no_proxy: true
+  temperature: 0
+  seed: 20260604
+  max_tokens: 2048
+  stream: true
+  extra_body: {}
+
+prompts:
+  outcome_prediction: prompts/downstream/v2/outcome_prediction_binary.md
+  issue_generation: prompts/downstream/v1/issue_generation.md
+  rule_recommendation: prompts/downstream/v1/rule_recommendation.md
+
+scheduler:
+  max_case_concurrency: 120
+  max_in_flight_requests: 50
+  thread_pool_workers: 160
+  max_retries: 2
+  max_validation_retries: 2
+  retry_backoff_seconds: 5
+  adaptive_throttle:
+    enabled: true
+    metrics_url: "${VLLM_METRICS_URL}"
+    metric_name: "vllm:num_requests_waiting"
+    model: mistral-small-3.2-24b-instruct
+    no_proxy: true
+    min_waiting_requests: 5
+    max_waiting_requests: 25
+    initial_concurrency: 50
+    min_concurrency: 1
+    max_concurrency: 240
+    additive_increase: 5
+    multiplicative_decrease: 0.7
+    poll_interval_seconds: 5
+
+max_tokens: 2048
+overwrite: false
+continue_on_error: true
+log_level: INFO
+
+evaluation:
+  outcome_labels: [allowed, dismissed]
+  semantic_issue_model: sentence-transformers/paraphrase-MiniLM-L6-v2
+  semantic_batch_size: 32
+
+output:
+  artifact_store: sqlite
+  artifact_store_filename: artifacts.sqlite
+  write_case_files: false

@@ -1,0 +1,257 @@
+{
+  "accuracy": 0.7330383480825958,
+  "count": 1356,
+  "macro_f1": 0.6290299664755157,
+  "mcc": 0.26020098897092525,
+  "prediction_distribution": {
+    "allowed": 1059,
+    "dismissed": 297
+  },
+  "top_features": {
+    "allowed": [
+      {
+        "feature": "word:respondents argued",
+        "weight": -2.248093404641174
+      },
+      {
+        "feature": "word:respondent argued",
+        "weight": -2.1711097625994147
+      },
+      {
+        "feature": "word:court relied",
+        "weight": -2.145823653684749
+      },
+      {
+        "feature": "word:reasoning",
+        "weight": -1.8858761736358614
+      },
+      {
+        "feature": "word:holding that",
+        "weight": -1.850580716800002
+      },
+      {
+        "feature": "word:relying on",
+        "weight": -1.6720242070316487
+      },
+      {
+        "feature": "word:relying",
+        "weight": -1.5902562864379721
+      },
+      {
+        "feature": "word:held that",
+        "weight": -1.544426574426784
+      },
+      {
+        "feature": "word:appeal no",
+        "weight": -1.5010094319733551
+      },
+      {
+        "feature": "word:respondents did",
+        "weight": -1.4908717678717749
+      },
+      {
+        "feature": "word:court failed",
+        "weight": -1.4656476189110041
+      },
+      {
+        "feature": "char:201",
+        "weight": -1.4174363196132083
+      },
+      {
+        "feature": "word:direction",
+        "weight": -1.411618530610615
+      },
+      {
+        "feature": "word:respondent failed",
+        "weight": -1.3613690223176718
+      },
+      {
+        "feature": "word:the appeal",
+        "weight": -1.3252127677143226
+      },
+      {
+        "feature": "word:court did",
+        "weight": -1.3218412115805778
+      },
+      {
+        "feature": "word:via special",
+        "weight": -1.3152147444385902
+      },
+      {
+        "feature": "word:stating",
+        "weight": -1.3075772998229358
+      },
+      {
+        "feature": "word:reasoning that",
+        "weight": -1.2834833470221285
+      },
+      {
+        "feature": "word:quashing of",
+        "weight": -1.273130673437009
+      },
+      {
+        "feature": "word:court via",
+        "weight": -1.2661572061405892
+      },
+      {
+        "feature": "word:respondent did",
+        "weight": -1.2272431832386133
+      },
+      {
+        "feature": "char:soni",
+        "weight": -1.211246158592802
+      },
+      {
+        "feature": "char:sonin",
+        "weight": -1.1933886933609261
+      },
+      {
+        "feature": "word:decision in",
+        "weight": -1.1878019699272904
+      },
+      {
+        "feature": "word:court allowed",
+        "weight": -1.1871027392050235
+      },
+      {
+        "feature": "word:the company",
+        "weight": -1.1727983730864737
+      },
+      {
+        "feature": "word:of all",
+        "weight": -1.1691642753728815
+      },
+      {
+        "feature": "word:15",
+        "weight": -1.1537322266117969
+      },
+      {
+        "feature": "word:ground that",
+        "weight": -1.1466672241498013
+      }
+    ],
+    "dismissed": [
+      {
+        "feature": "word:the petitioner",
+        "weight": 3.9741094954403784
+      },
+      {
+        "feature": "word:appellant argued",
+        "weight": 3.6577453997978364
+      },
+      {
+        "feature": "word:appellant did",
+        "weight": 2.949507021262254
+      },
+      {
+        "feature": "word:petitioner",
+        "weight": 2.919624840746062
+      },
+      {
+        "feature": "word:filed special",
+        "weight": 2.718224304562197
+      },
+      {
+        "feature": "word:appellants argued",
+        "weight": 2.67151453347047
+      },
+      {
+        "feature": "word:appellant relied",
+        "weight": 2.618771693895434
+      },
+      {
+        "feature": "word:petitioner filed",
+        "weight": 2.479505116309151
+      },
+      {
+        "feature": "word:court arguing",
+        "weight": 2.4207137101809444
+      },
+      {
+        "feature": "word:the petitioners",
+        "weight": 2.4022414892739414
+      },
+      {
+        "feature": "word:appellant also",
+        "weight": 2.2655945711863072
+      },
+      {
+        "feature": "word:arguing that",
+        "weight": 2.1386107777040912
+      },
+      {
+        "feature": "word:contended that",
+        "weight": 2.1162290539278805
+      },
+      {
+        "feature": "char:tione",
+        "weight": 2.006943947826535
+      },
+      {
+        "feature": "word:contended",
+        "weight": 1.983116666446009
+      },
+      {
+        "feature": "word:filed the",
+        "weight": 1.9477696998909544
+      },
+      {
+        "feature": "word:appellant claimed",
+        "weight": 1.8441421956051947
+      },
+      {
+        "feature": "char:onten",
+        "weight": 1.832843501660198
+      },
+      {
+        "feature": "word:appellants did",
+        "weight": 1.824700993643765
+      },
+      {
+        "feature": "word:arguing",
+        "weight": 1.7905673884444666
+      },
+      {
+        "feature": "word:found that",
+        "weight": 1.7832485615596219
+      },
+      {
+        "feature": "char:rgu",
+        "weight": 1.7578503813821027
+      },
+      {
+        "feature": "char:argu",
+        "weight": 1.7448352746868394
+      },
+      {
+        "feature": "char: argu",
+        "weight": 1.741841437915995
+      },
+      {
+        "feature": "char: arg",
+        "weight": 1.7350963843253802
+      },
+      {
+        "feature": "word:court contending",
+        "weight": 1.7220875115513674
+      },
+      {
+        "feature": "word:petitioners filed",
+        "weight": 1.721659243235626
+      },
+      {
+        "feature": "word:leave petition",
+        "weight": 1.713359199824186
+      },
+      {
+        "feature": "word:petitioners",
+        "weight": 1.6836580148579359
+      },
+      {
+        "feature": "word:court found",
+        "weight": 1.6704839688542223
+      }
+    ]
+  },
+  "train_count": 34697
+}

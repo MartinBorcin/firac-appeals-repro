@@ -1,0 +1,48 @@
+{
+  "artifacts": {
+    "audit": "runs/evaluations/authority_provenance/full_20260817/rule_identifier_audit.jsonl",
+    "potential_issues": "runs/evaluations/authority_provenance/full_20260817/potential_issues.jsonl",
+    "proposed_patches": "runs/evaluations/authority_provenance/full_20260817/proposed_patches.jsonl"
+  },
+  "cases": 45016,
+  "counts": {
+    "audit_status:partial": 31878,
+    "audit_status:supported": 43713,
+    "audit_status:unsupported": 10238,
+    "case_name:absent:none": 26275,
+    "case_name:empty:none": 16,
+    "case_name:present:literal": 52011,
+    "case_name:present:normalized": 7527,
+    "citation:absent:none": 25144,
+    "citation:ambiguous_short:none": 7,
+    "citation:empty:none": 3449,
+    "citation:present:literal": 47053,
+    "citation:present:normalized": 10176,
+    "reference:absent:none": 26719,
+    "reference:present:literal": 51645,
+    "reference:present:normalized": 7465
+  },
+  "counts_by_source": {
+    "in_abs:partial": 4705,
+    "in_abs:supported": 5972,
+    "in_abs:unsupported": 1462,
+    "supreme_court_vanga:partial": 27173,
+    "supreme_court_vanga:supported": 37741,
+    "supreme_court_vanga:unsupported": 8776
+  },
+  "elapsed_seconds": 131.29354913099087,
+  "inputs": [
+    "runs/annotations/in_abs_local_vllm_full_20260529/final.jsonl",
+    "data/splits/supreme_court_vanga_posthoc_temporal_20240701/all.jsonl"
+  ],
+  "policy": {
+    "absence_interpretation": "review flag, not proof of hallucination",
+    "normalization": "Unicode NFKC, case-folding, punctuation/whitespace, and v/vs/versus",
+    "patches_applied": false,
+    "source_of_truth": "judgment_text only"
+  },
+  "potential_issue_rate": 0.49069661769332046,
+  "potential_issue_rules": 42116,
+  "precedent_rules": 85829,
+  "rules_per_second": 653.718332454924
+}

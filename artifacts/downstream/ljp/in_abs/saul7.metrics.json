@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "accuracy": 0.47959183673469385,
+    "label_distribution": {
+      "allowed": 48,
+      "dismissed": 50
+    },
+    "macro_f1": 0.32413793103448274,
+    "prediction_distribution": {
+      "allowed": 97,
+      "dismissed": 1
+    }
+  },
+  "count": 98,
+  "predictions": "runs/evaluations/downstream/zero_shot_binary/saul_7b_seed20260604/outcome_prediction/predictions.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test_binary/outcome_prediction.jsonl",
+  "task": "outcome_prediction"
+}

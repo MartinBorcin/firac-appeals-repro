@@ -1,0 +1,80 @@
+{
+  "aggregate": {
+    "accuracy": {
+      "mean": 0.6224489795918368,
+      "std": 0.0367913395455509
+    },
+    "macro_f1": {
+      "mean": 0.6207193760786696,
+      "std": 0.03740750684649129
+    },
+    "mcc": {
+      "mean": 0.2456902546045695,
+      "std": 0.07583308783278357
+    }
+  },
+  "dataset": "in_abs",
+  "model": "law-ai/InLegalBERT",
+  "per_seed": [
+    {
+      "accuracy": 0.6530612244897959,
+      "best_epoch": 3,
+      "label_distribution": {
+        "allowed": 48,
+        "dismissed": 50
+      },
+      "macro_f1": 0.6524822695035462,
+      "mcc": 0.3098866597049237,
+      "metrics": "runs/evaluations/downstream/fine_tuned/inlegalbert/in_abs/seed_20260604/metrics.json",
+      "prediction_distribution": {
+        "allowed": 54,
+        "dismissed": 44
+      },
+      "seed": 20260604,
+      "validation_macro_f1": 0.66276504939701
+    },
+    {
+      "accuracy": 0.5816326530612245,
+      "best_epoch": 3,
+      "label_distribution": {
+        "allowed": 48,
+        "dismissed": 50
+      },
+      "macro_f1": 0.5794871794871795,
+      "mcc": 0.16201906116382953,
+      "metrics": "runs/evaluations/downstream/fine_tuned/inlegalbert/in_abs/seed_20260605/metrics.json",
+      "prediction_distribution": {
+        "allowed": 43,
+        "dismissed": 55
+      },
+      "seed": 20260605,
+      "validation_macro_f1": 0.6449887843612203
+    },
+    {
+      "accuracy": 0.6326530612244898,
+      "best_epoch": 3,
+      "label_distribution": {
+        "allowed": 48,
+        "dismissed": 50
+      },
+      "macro_f1": 0.630188679245283,
+      "mcc": 0.2651650429449553,
+      "metrics": "runs/evaluations/downstream/fine_tuned/inlegalbert/in_abs/seed_20260606/metrics.json",
+      "prediction_distribution": {
+        "allowed": 42,
+        "dismissed": 56
+      },
+      "seed": 20260606,
+      "validation_macro_f1": 0.6777819408017984
+    }
+  ],
+  "seeds": [
+    20260604,
+    20260605,
+    20260606
+  ],
+  "test": "runs/evaluations/downstream/in_abs_test_binary/outcome_prediction.jsonl",
+  "test_count": 98,
+  "train": "runs/evaluations/downstream/in_abs_train_binary/outcome_prediction.jsonl",
+  "train_count": 6877
+}

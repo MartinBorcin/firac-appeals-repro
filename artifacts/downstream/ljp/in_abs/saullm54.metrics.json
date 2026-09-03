@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "accuracy": 0.47959183673469385,
+    "label_distribution": {
+      "allowed": 48,
+      "dismissed": 50
+    },
+    "macro_f1": 0.4492561983471074,
+    "prediction_distribution": {
+      "allowed": 27,
+      "dismissed": 71
+    }
+  },
+  "count": 98,
+  "predictions": "runs/evaluations/downstream/zero_shot_binary/saullm_54b_seed20260604/outcome_prediction/predictions.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test_binary/outcome_prediction.jsonl",
+  "task": "outcome_prediction"
+}

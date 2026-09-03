@@ -4,5 +4,5 @@ message: "If you use this code, please cite the FIRAC Appeals paper and dataset 
 type: software
 authors:
   - family-names: "FIRAC Appeals contributors"
-version: 0.1.0
+version: 0.2.0
 license: MIT

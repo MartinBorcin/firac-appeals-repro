@@ -1,0 +1,322 @@
+{
+  "case_id_overlap_count": 0,
+  "exact_normalized_text_matches": [],
+  "explicit_outcome_patterns": {
+    "court_disposition": {
+      "test": {
+        "allowed": 505,
+        "dismissed": 176
+      },
+      "train": {
+        "allowed": 8372,
+        "dismissed": 5772
+      }
+    },
+    "explicit_allowed": {
+      "test": {
+        "allowed": 1
+      },
+      "train": {
+        "allowed": 33,
+        "dismissed": 17
+      }
+    },
+    "explicit_dismissed": {
+      "test": {
+        "allowed": 5,
+        "dismissed": 6
+      },
+      "train": {
+        "allowed": 175,
+        "dismissed": 119
+      }
+    },
+    "result_set_aside": {
+      "test": {
+        "dismissed": 1
+      },
+      "train": {
+        "allowed": 32,
+        "dismissed": 19
+      }
+    },
+    "result_upheld": {
+      "test": {
+        "allowed": 6
+      },
+      "train": {
+        "allowed": 65,
+        "dismissed": 55
+      }
+    }
+  },
+  "test": "runs/evaluations/downstream/sc_test_temporal_20240701_binary/outcome_prediction.jsonl",
+  "test_count": 1356,
+  "test_labels": {
+    "allowed": 1015,
+    "dismissed": 341
+  },
+  "tfidf_logistic_regression": {
+    "accuracy": 0.7448377581120944,
+    "class_order": [
+      "allowed",
+      "dismissed"
+    ],
+    "macro_f1": 0.6454264320456586,
+    "mcc": 0.2930795847747784,
+    "prediction_distribution": {
+      "allowed": 1059,
+      "dismissed": 297
+    },
+    "top_features_for_allowed": [
+      {
+        "coefficient": -3.3617073031069844,
+        "feature": "reasoning"
+      },
+      {
+        "coefficient": -2.9808933869739613,
+        "feature": "relying"
+      },
+      {
+        "coefficient": -2.958828993117607,
+        "feature": "relying on"
+      },
+      {
+        "coefficient": -2.8419382814710223,
+        "feature": "without"
+      },
+      {
+        "coefficient": -2.6458751690081965,
+        "feature": "holding that"
+      },
+      {
+        "coefficient": -2.621690577026594,
+        "feature": "court relied"
+      },
+      {
+        "coefficient": -2.5131319902273908,
+        "feature": "respondents argued"
+      },
+      {
+        "coefficient": -2.368246967808938,
+        "feature": "respondents"
+      },
+      {
+        "coefficient": -2.3302583417418727,
+        "feature": "respondent argued"
+      },
+      {
+        "coefficient": -2.308442608255103,
+        "feature": "reasoning that"
+      },
+      {
+        "coefficient": -2.2021156358054315,
+        "feature": "despite"
+      },
+      {
+        "coefficient": -2.167147574631157,
+        "feature": "stating"
+      },
+      {
+        "coefficient": -2.0707820471086174,
+        "feature": "respondent"
+      },
+      {
+        "coefficient": -1.9789486288506175,
+        "feature": "direction"
+      },
+      {
+        "coefficient": -1.9671755372625903,
+        "feature": "the respondents"
+      },
+      {
+        "coefficient": -1.934383744156516,
+        "feature": "held that"
+      },
+      {
+        "coefficient": -1.81652263702459,
+        "feature": "respondents did"
+      },
+      {
+        "coefficient": -1.8161228065687034,
+        "feature": "reasoned that"
+      },
+      {
+        "coefficient": -1.7997016431884205,
+        "feature": "reasoned"
+      },
+      {
+        "coefficient": -1.748949024139581,
+        "feature": "court failed"
+      },
+      {
+        "coefficient": -1.727752913750116,
+        "feature": "appeal no"
+      },
+      {
+        "coefficient": -1.7036305967093373,
+        "feature": "court did"
+      },
+      {
+        "coefficient": -1.6514106604896268,
+        "feature": "court order"
+      },
+      {
+        "coefficient": -1.6263839318221243,
+        "feature": "respondent did"
+      },
+      {
+        "coefficient": -1.589924625786721,
+        "feature": "the respondent"
+      },
+      {
+        "coefficient": -1.5828746671506,
+        "feature": "court via"
+      },
+      {
+        "coefficient": -1.580136784260425,
+        "feature": "via special"
+      },
+      {
+        "coefficient": -1.5737168655493392,
+        "feature": "alternative"
+      },
+      {
+        "coefficient": -1.571608056582805,
+        "feature": "respondent failed"
+      },
+      {
+        "coefficient": -1.5584700568368572,
+        "feature": "the appeal"
+      }
+    ],
+    "top_features_for_dismissed": [
+      {
+        "coefficient": 4.803949170775391,
+        "feature": "the petitioner"
+      },
+      {
+        "coefficient": 4.703386997456464,
+        "feature": "appellant argued"
+      },
+      {
+        "coefficient": 4.489949941288989,
+        "feature": "arguing"
+      },
+      {
+        "coefficient": 4.324890565946583,
+        "feature": "arguing that"
+      },
+      {
+        "coefficient": 3.8477956091655354,
+        "feature": "court arguing"
+      },
+      {
+        "coefficient": 3.726091600588128,
+        "feature": "petitioner"
+      },
+      {
+        "coefficient": 3.64254607815594,
+        "feature": "the petitioners"
+      },
+      {
+        "coefficient": 3.5499731168628896,
+        "feature": "contended that"
+      },
+      {
+        "coefficient": 3.507722410343657,
+        "feature": "appellant did"
+      },
+      {
+        "coefficient": 3.469871301251231,
+        "feature": "contended"
+      },
+      {
+        "coefficient": 3.3756315241175523,
+        "feature": "filed special"
+      },
+      {
+        "coefficient": 3.314942094766608,
+        "feature": "appellants argued"
+      },
+      {
+        "coefficient": 3.0686026925625947,
+        "feature": "appellant relied"
+      },
+      {
+        "coefficient": 3.0177777174857794,
+        "feature": "argued"
+      },
+      {
+        "coefficient": 3.015213179718644,
+        "feature": "petitioner filed"
+      },
+      {
+        "coefficient": 2.9525708841795653,
+        "feature": "petitioners"
+      },
+      {
+        "coefficient": 2.8944733076488816,
+        "feature": "contending that"
+      },
+      {
+        "coefficient": 2.8530385809472296,
+        "feature": "contending"
+      },
+      {
+        "coefficient": 2.8208416641803358,
+        "feature": "appellant also"
+      },
+      {
+        "coefficient": 2.7419340157974523,
+        "feature": "argued that"
+      },
+      {
+        "coefficient": 2.6536450239016776,
+        "feature": "court contending"
+      },
+      {
+        "coefficient": 2.431907337987597,
+        "feature": "filed the"
+      },
+      {
+        "coefficient": 2.3768927838956015,
+        "feature": "petitioners filed"
+      },
+      {
+        "coefficient": 2.351096355651262,
+        "feature": "appellant claimed"
+      },
+      {
+        "coefficient": 2.323786441717075,
+        "feature": "the appellants"
+      },
+      {
+        "coefficient": 2.3090274860815563,
+        "feature": "leave petition"
+      },
+      {
+        "coefficient": 2.230695731688775,
+        "feature": "found that"
+      },
+      {
+        "coefficient": 2.2096047994243513,
+        "feature": "should"
+      },
+      {
+        "coefficient": 2.158523888766458,
+        "feature": "dismissed"
+      },
+      {
+        "coefficient": 2.080809189822973,
+        "feature": "appellant contended"
+      }
+    ]
+  },
+  "train": "runs/evaluations/downstream/sc_train_temporal_20240701_binary/outcome_prediction.jsonl",
+  "train_count": 34697,
+  "train_labels": {
+    "allowed": 20431,
+    "dismissed": 14266
+  }
+}

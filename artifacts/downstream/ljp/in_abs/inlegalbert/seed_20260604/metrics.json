@@ -1,0 +1,40 @@
+{
+  "aggregate": {
+    "accuracy": 0.6530612244897959,
+    "label_distribution": {
+      "allowed": 48,
+      "dismissed": 50
+    },
+    "macro_f1": 0.6524822695035462,
+    "mcc": 0.3098866597049237,
+    "prediction_distribution": {
+      "allowed": 54,
+      "dismissed": 44
+    }
+  },
+  "best_epoch": 3,
+  "count": 98,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.7031015163844394,
+      "validation_macro_f1": 0.6348342049003707
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6199006502775802,
+      "validation_macro_f1": 0.6623798565046704
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5448436299242925,
+      "validation_macro_f1": 0.66276504939701
+    }
+  ],
+  "model": "law-ai/InLegalBERT",
+  "predictions": "runs/evaluations/downstream/fine_tuned/inlegalbert/in_abs/seed_20260604/predictions.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test_binary/outcome_prediction.jsonl",
+  "seed": 20260604,
+  "task": "outcome_prediction",
+  "validation_macro_f1": 0.66276504939701
+}

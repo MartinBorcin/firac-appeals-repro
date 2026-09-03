@@ -1,0 +1,66 @@
+run:
+  run_id: default
+  overwrite: false
+  continue_on_error: true
+  final_filename: final.jsonl
+
+backend:
+  name: openai_compatible
+  base_url: "${OPENAI_BASE_URL}"
+  api_key_env: "OPENAI_API_KEY"
+  model: "${FIRAC_MODEL}"
+  system_prompt: "You are a careful legal annotation system. Follow the requested schema exactly and return only the requested content."
+  timeout_seconds: 180
+  temperature: 0
+  max_tokens: 4096
+  stream: false
+  extra_body: {}
+
+scheduler:
+  max_case_concurrency: 8
+  max_in_flight_requests: 50
+  min_pending_requests: 32
+  max_retries: 2
+  max_validation_retries: 2
+  retry_backoff_seconds: 5
+  request_timeout_seconds: 240
+  adaptive_throttle:
+    enabled: false
+    metrics_url: ""
+    metric_name: "vllm:num_requests_waiting"
+    model: ""
+    no_proxy: true
+    min_waiting_requests: 5
+    max_waiting_requests: 25
+    initial_concurrency: 50
+    min_concurrency: 1
+    max_concurrency: 200
+    additive_increase: 5
+    multiplicative_decrease: 0.7
+    poll_interval_seconds: 5
+
+stage_max_tokens:
+  metadata_ner: 2048
+  issue_analyst: 2048
+  legal_researcher: 4096
+  logician: 4096
+  firac_judge: 8192
+  firac_verifier: 4096
+
+prompts:
+  metadata_ner: prompts/annotation/v2/metadata_ner.md
+  legal_researcher: prompts/annotation/v2/legal_researcher.md
+  issue_analyst: prompts/annotation/v2/issue_analyst.md
+  logician: prompts/annotation/v2/logician.md
+  firac_judge: prompts/annotation/v2/firac_judge.md
+  firac_verifier: prompts/annotation/v2/firac_verifier.md
+
+output:
+  save_intermediates: true
+  save_prompts: true
+  artifact_store: sqlite
+  artifact_store_filename: artifacts.sqlite
+  write_case_files: false
+  log_level: INFO
+  validate_json: true
+  skip_done: true

@@ -1,0 +1,27 @@
+{
+  "scope": {
+    "judgments_screened": 45016,
+    "precedent_rules_screened": 85829,
+    "llm_candidate_cases": 22986,
+    "llm_candidate_rules": 41731
+  },
+  "verification": {
+    "model": "gpt-oss-120b",
+    "verified_rules": 24824,
+    "unresolved_rules": 16907,
+    "unresolved_policy": "no patch operation"
+  },
+  "patch": {
+    "cases_changed": 6737,
+    "rules_changed": 12476,
+    "field_edits": 26012,
+    "removals": 25979,
+    "corrections": 33,
+    "edits_by_field": {
+      "reference": 6952,
+      "case_name": 6930,
+      "citation": 12130
+    }
+  },
+  "interpretation": "The patch provides an optional source-grounded identifier view; it is not an external legal-correctness audit."
+}

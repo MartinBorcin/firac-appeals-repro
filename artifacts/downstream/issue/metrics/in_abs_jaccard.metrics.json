@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "gold_issue_count": 1.54,
+    "issue_avg_best_token_f1": 0.35357122063304613,
+    "issue_exact_f1": 0.0,
+    "issue_exact_precision": 0.0,
+    "issue_exact_recall": 0.0,
+    "issue_semantic_avg_best_cosine": 0.5803721271455288,
+    "issue_semantic_f1": 0.5790656944771762,
+    "issue_semantic_precision": 0.5803810545802116,
+    "issue_semantic_recall": 0.5803631997108459,
+    "predicted_issue_count": 1.59
+  },
+  "count": 100,
+  "predictions": "runs/evaluations/downstream/baselines/issue_nearest_neighbor.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test/issue_generation.jsonl",
+  "task": "issue_generation"
+}

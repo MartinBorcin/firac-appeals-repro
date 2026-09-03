@@ -24,7 +24,16 @@ def main() -> None:
     parser.add_argument("--tasks", nargs="+", default=DEFAULT_TASKS, choices=DEFAULT_TASKS)
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--overwrite", action="store_true")
+    parser.add_argument(
+        "--minimum-success-rate",
+        type=float,
+        default=0.0,
+        help="Fail after a task if fewer than this fraction of predictions are valid (0-1).",
+    )
     args = parser.parse_args()
+
+    if not 0.0 <= args.minimum_success_rate <= 1.0:
+        parser.error("--minimum-success-rate must be between 0 and 1")
 
     config = read_yaml(args.config)
     if args.overwrite:
@@ -48,6 +57,12 @@ def main() -> None:
         runner = DownstreamLLMRunner(task, dict(config), task_dir)
         results = asyncio.run(runner.run_many(rows))
         ok = sum(1 for row in results if row.get("prediction_status") == "ok")
+        success_rate = ok / len(results) if results else 0.0
+        if success_rate < args.minimum_success_rate:
+            raise SystemExit(
+                f"{task}: success rate {success_rate:.3f} is below required "
+                f"{args.minimum_success_rate:.3f} ({ok}/{len(results)})"
+            )
         prediction_path = task_dir / "predictions.jsonl"
         predictions = read_jsonl(prediction_path) if prediction_path.exists() else []
         evaluation_config = config.get("evaluation", {}) or {}

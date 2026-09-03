@@ -1,0 +1,42 @@
+# Portable record of the vLLM model-serving profiles used for the paper runs.
+# Cluster queue, account, ports, cache paths, and wall-time requests are omitted.
+profiles:
+  qwen_3_6_27b:
+    model: Qwen/Qwen3.6-27B
+    served_model_name: qwen-3.6-27b
+    accelerator: 1x H100
+    extra_args: [--trust-remote-code, --reasoning-parser, qwen3, --max-num-seqs, "512"]
+
+  qwen3_32b:
+    model: Qwen/Qwen3-32B
+    served_model_name: qwen3-32b
+    accelerator: 1x H100
+    extra_args: [--trust-remote-code, --max-model-len, "32768", --max-num-seqs, "256", --reasoning-parser, qwen3]
+
+  mistral_small_3_2_24b:
+    model: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+    served_model_name: mistral-small-3.2-24b-instruct
+    accelerator: 1x H100
+    extra_args: [--tokenizer-mode, mistral, --config-format, mistral, --load-format, mistral, --max-model-len, "32768", --max-num-seqs, "256"]
+    authority_profile_extra_args: [--gpu-memory-utilization, "0.90", --max-num-seqs, "128"]
+
+  saul_7b:
+    model: Equall/Saul-7B-Instruct-v1
+    served_model_name: saul-7b-instruct
+    accelerator: 1x L40S
+    extra_args: [--max-model-len, "32768", --max-num-seqs, "192", --gpu-memory-utilization, "0.90", --dtype, bfloat16]
+
+  saullm_54b:
+    model: Equall/SaulLM-54B-Instruct
+    served_model_name: saullm-54b-instruct
+    accelerator: 2x H100
+    environment:
+      NCCL_P2P_DISABLE: "1"
+      NCCL_CUMEM_ENABLE: "0"
+    extra_args: [--tensor-parallel-size, "2", --pipeline-parallel-size, "1", --distributed-executor-backend, mp, --chat-template, prompts/chat_templates/mistral_inst.jinja, --disable-custom-all-reduce, --enforce-eager, --max-model-len, "32768", --max-num-seqs, "64", --gpu-memory-utilization, "0.90", --max-num-batched-tokens, "4096", --dtype, bfloat16]
+
+  gpt_oss_120b_judge:
+    model: openai/gpt-oss-120b
+    served_model_name: gpt-oss-120b
+    accelerator: 1x H100
+    extra_args: [--trust-remote-code, --reasoning-parser, openai_gptoss, --max-model-len, "131072", --max-num-seqs, "16", --gpu-memory-utilization, "0.95"]

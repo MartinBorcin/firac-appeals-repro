@@ -12,7 +12,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True)
     parser.add_argument("--output-dir", required=True)
-    parser.add_argument("--config", default="configs/annotation/openai_compatible.yaml")
+    parser.add_argument("--config", default="configs/annotation/firac_pipeline.yaml")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--seed", type=int, default=13)
     parser.add_argument("--sample", choices=["first", "random", "test_split"], default="first")

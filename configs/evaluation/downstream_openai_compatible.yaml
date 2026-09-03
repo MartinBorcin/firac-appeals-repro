@@ -11,7 +11,7 @@ backend:
   extra_body: {}
 
 prompts:
-  outcome_prediction: prompts/downstream/v1/outcome_prediction.md
+  outcome_prediction: prompts/downstream/v2/outcome_prediction_binary.md
   issue_generation: prompts/downstream/v1/issue_generation.md
   rule_recommendation: prompts/downstream/v1/rule_recommendation.md
 
@@ -28,6 +28,7 @@ continue_on_error: true
 log_level: INFO
 
 evaluation:
+  outcome_labels: [allowed, dismissed]
   semantic_issue_model: sentence-transformers/paraphrase-MiniLM-L6-v2
   semantic_batch_size: 32
 

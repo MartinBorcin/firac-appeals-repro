@@ -1,0 +1,707 @@
+{
+  "files": [
+    {
+      "bytes": 2907,
+      "path": "authority_patch/METHOD.md",
+      "sha256": "2ea0085e1daf6b4bdf727ed6b3cf26bcf93dd1dc8f5fb9d1656233e4362f4923"
+    },
+    {
+      "bytes": 5126,
+      "path": "authority_patch/REPORT.md",
+      "sha256": "b3eda583073cd91b35e15220fbdc9558dc0407ae52feebb055efe9437641446b"
+    },
+    {
+      "bytes": 1009,
+      "path": "authority_patch/corpus_pair_corroboration_summary.json",
+      "sha256": "751e6ab5adab9503ebeebc29b3b4d657ea2021fb4be31c1d5534fbb1d71b335a"
+    },
+    {
+      "bytes": 627,
+      "path": "authority_patch/externally_verified_canonical_corrections.jsonl",
+      "sha256": "cc5c514eee67fa956d02d6e7b8155eaea5588b3da01ed788869592ec4ad80f29"
+    },
+    {
+      "bytes": 6457103,
+      "path": "authority_patch/strict_authorities_patch.jsonl",
+      "sha256": "7eee5c0cca751845a57d7b3a436755ef9e19d9e9bd132c9b76dd16143904f95c"
+    },
+    {
+      "bytes": 703,
+      "path": "authority_patch/strict_patch_summary.json",
+      "sha256": "b0f3e1ab29e8d798d7734489c68fbc110b7e6dc19179b23f278596ea71f6778e"
+    },
+    {
+      "bytes": 1786,
+      "path": "authority_patch/summary.json",
+      "sha256": "37b10f01e16f6e4be62d526f468af8d387bc5eaf46f5d030ed7537137352a35a"
+    },
+    {
+      "bytes": 178176,
+      "path": "downstream/authority/in_abs/mistral24.jsonl",
+      "sha256": "f8177e5d2370b98a911d3e75c19a127ce39e8a8652c6b027afc025d4629f0ae4"
+    },
+    {
+      "bytes": 1145,
+      "path": "downstream/authority/in_abs/mistral24.metrics.json",
+      "sha256": "1d03bb26c9242cc62067f28fe873ee3874b0dde432df98b9ed1ff463e1f1a5d6"
+    },
+    {
+      "bytes": 305662,
+      "path": "downstream/authority/in_abs/mistral24_predicted_issues.jsonl",
+      "sha256": "837b0a5d2278dc62558bc68a212c1b64da1187aa7f82e63ad8355674467ef1c9"
+    },
+    {
+      "bytes": 3133,
+      "path": "downstream/authority/in_abs/mistral24_predicted_issues.metrics.json",
+      "sha256": "3deeab8819fcc02f17fa8a974a1b594e95da6380df319214ca9ad7f714a19bbb"
+    },
+    {
+      "bytes": 358342,
+      "path": "downstream/authority/in_abs/mistral24_retrieve_select.jsonl",
+      "sha256": "15880227cf4669903d9fd3e49031bd170f75e6c9951b901a3d6651cda8470dd5"
+    },
+    {
+      "bytes": 3027,
+      "path": "downstream/authority/in_abs/mistral24_retrieve_select.metrics.json",
+      "sha256": "49df017508315853191e6eeedeab7797f4b8671665a533b2a7cfcd400dc06ec4"
+    },
+    {
+      "bytes": 402206,
+      "path": "downstream/authority/in_abs/qwen36.jsonl",
+      "sha256": "93ea97ae2c034e6f79feb3903ca5be4717fa5d994d20140d43dd59a345255f7e"
+    },
+    {
+      "bytes": 2764,
+      "path": "downstream/authority/in_abs/qwen36.metrics.json",
+      "sha256": "c2165251ad62d3fdf4c7f1316f9f887b496799d847632095bb3e1c42a4b06ad1"
+    },
+    {
+      "bytes": 190064,
+      "path": "downstream/authority/in_abs/qwen3_32b.jsonl",
+      "sha256": "fe975e379488724e2c844ade00971a5c5cc9638877d5c0594ad5d9566eb53e97"
+    },
+    {
+      "bytes": 1163,
+      "path": "downstream/authority/in_abs/qwen3_32b.metrics.json",
+      "sha256": "106ae17a69e36b1fc5fcca118889cb91d2b61e40d521d7098b273d35453530d0"
+    },
+    {
+      "bytes": 2711,
+      "path": "downstream/authority/in_abs/rule_recommendation.metrics.json",
+      "sha256": "f52e76fcb19b40f513d234b19da53c66fc918a0602bd6df1ced8d03e1f94a580"
+    },
+    {
+      "bytes": 375693,
+      "path": "downstream/authority/in_abs/rule_recommendation.predictions.jsonl",
+      "sha256": "2cc56ab65fe63f17c2f8a1aa43dc189091e08b451f54cf5a633d8bc86c65a54f"
+    },
+    {
+      "bytes": 205710,
+      "path": "downstream/authority/in_abs/rule_tfidf_top5.jsonl",
+      "sha256": "0d177af45fa1dbeba08fcd25603acf44549835917284f243bd71809324c8f038"
+    },
+    {
+      "bytes": 2696,
+      "path": "downstream/authority/in_abs/rule_tfidf_top5.metrics.json",
+      "sha256": "ccb602ec3690ea3ca6cb15101b7cf069b8071fb5f7d92336487edba0970e4c00"
+    },
+    {
+      "bytes": 3074,
+      "path": "downstream/authority/in_abs/rule_top100.metrics.json",
+      "sha256": "15305a38770bcc3a5111ad4059071ea9a586ff38484acec9a6cdbf66cdb92bbc"
+    },
+    {
+      "bytes": 332888,
+      "path": "downstream/authority/in_abs/saullm54.jsonl",
+      "sha256": "27e837f4eaaa59cbbef2a9e15fded5ee25173054005c6d746156d16ff1d6761f"
+    },
+    {
+      "bytes": 3101,
+      "path": "downstream/authority/in_abs/saullm54.metrics.json",
+      "sha256": "7112b311021525f4fe756ab38c4fc3225b5c9de564e5be4b383e63d7bd6adb34"
+    },
+    {
+      "bytes": 4466605,
+      "path": "downstream/authority/supreme_court/mistral24.jsonl",
+      "sha256": "f794d85646e8d3dc3c7e5d54030928b7497c4cf8d28558a9aae302acb004b749"
+    },
+    {
+      "bytes": 3055,
+      "path": "downstream/authority/supreme_court/mistral24.metrics.json",
+      "sha256": "9a22c926dc94464d3b11647f89dc553355802fda6e5000342eb46dc7c3d75d5c"
+    },
+    {
+      "bytes": 4497144,
+      "path": "downstream/authority/supreme_court/mistral24_predicted_issues.jsonl",
+      "sha256": "35c80c772d42c9fa84b2f0ac7ca3d6ef0dceb01061029ddf5b31df8a9b5fce80"
+    },
+    {
+      "bytes": 3449,
+      "path": "downstream/authority/supreme_court/mistral24_predicted_issues.metrics.json",
+      "sha256": "0f069d66960a35c11d0d79fff657d5bbbb7724f4b3260307b38032019f9b624c"
+    },
+    {
+      "bytes": 5351504,
+      "path": "downstream/authority/supreme_court/mistral24_retrieve_select.jsonl",
+      "sha256": "4efc7674b97567e34afda3befedfedb702b566bf657911854c703dc5ca2d68fe"
+    },
+    {
+      "bytes": 3435,
+      "path": "downstream/authority/supreme_court/mistral24_retrieve_select.metrics.json",
+      "sha256": "683d88c37d6a6fd96ad623c653416a57f1fd605c55b78e2745855dacd4891e86"
+    },
+    {
+      "bytes": 6058581,
+      "path": "downstream/authority/supreme_court/qwen36.jsonl",
+      "sha256": "66a685f228282f860c0b16f6ccfcd78264904129f17dd25e971517510f547845"
+    },
+    {
+      "bytes": 3045,
+      "path": "downstream/authority/supreme_court/qwen36.metrics.json",
+      "sha256": "bce2b91a199ab0d86bdaacd6080f9fdf8c2202a44e1f9a7c2d33196970b812ce"
+    },
+    {
+      "bytes": 4726004,
+      "path": "downstream/authority/supreme_court/qwen3_32b.jsonl",
+      "sha256": "3ed613fce1e5434da61fb8da24c75691f7c201ee846565a6eb42791469f02169"
+    },
+    {
+      "bytes": 3056,
+      "path": "downstream/authority/supreme_court/qwen3_32b.metrics.json",
+      "sha256": "5689b37b1cacae04ba1e1d50522399d764c2fe8760c689364c4fd720c1616bf8"
+    },
+    {
+      "bytes": 3023,
+      "path": "downstream/authority/supreme_court/rule_recommendation.metrics.json",
+      "sha256": "32a9d5f3ff1d3a0f252c7e88bea65ef25100379df3b0672d1e73995c48f1d8ec"
+    },
+    {
+      "bytes": 5417149,
+      "path": "downstream/authority/supreme_court/rule_recommendation.predictions.jsonl",
+      "sha256": "003077d04c19ebd4257ab847365476f6f1e11136f5a7f69a9d753e78c0c422fd"
+    },
+    {
+      "bytes": 2976365,
+      "path": "downstream/authority/supreme_court/rule_tfidf_top5.jsonl",
+      "sha256": "2e88af701afc8d0f9a50fe5c8b9032e81bcf86b053524484196270178fc1b06c"
+    },
+    {
+      "bytes": 3028,
+      "path": "downstream/authority/supreme_court/rule_tfidf_top5.metrics.json",
+      "sha256": "cff11b04744b78228d651d3c44f5dca2f7600ce44611e20c2909f6899a7836aa"
+    },
+    {
+      "bytes": 3366,
+      "path": "downstream/authority/supreme_court/rule_top100.metrics.json",
+      "sha256": "dcadd4c6573fc85c5dcc07f53f790c565f2e5eae5b74e2519a7d32ab332e2241"
+    },
+    {
+      "bytes": 4830626,
+      "path": "downstream/authority/supreme_court/saullm54.jsonl",
+      "sha256": "b857aa0d368ee910731481711c4af826cfba5ebbddfe5194fdf3854f5f1d5915"
+    },
+    {
+      "bytes": 3425,
+      "path": "downstream/authority/supreme_court/saullm54.metrics.json",
+      "sha256": "c569ec865d7530ae041e8418c4c0113fa43e70fe3e365f5462b23db754ca8600"
+    },
+    {
+      "bytes": 651,
+      "path": "downstream/issue/metrics/in_abs_jaccard.metrics.json",
+      "sha256": "1d1f2e2e41d54d3eafc87e63ff844e80846dd7acea16ef7b2bf7eb0a7c8216ed"
+    },
+    {
+      "bytes": 689,
+      "path": "downstream/issue/metrics/in_abs_mistral.metrics.json",
+      "sha256": "941333035175aebd007a8bb7066b78b3b312a23642ec87ba6aee5dc9199eb1e4"
+    },
+    {
+      "bytes": 668,
+      "path": "downstream/issue/metrics/in_abs_mpnet.metrics.json",
+      "sha256": "749edf5527d3403fe850ce772bcc40b1ef56313ea73e6880a4a3de1ab7b7bd7c"
+    },
+    {
+      "bytes": 679,
+      "path": "downstream/issue/metrics/in_abs_qwen36.metrics.json",
+      "sha256": "90dba04485a0d97f37694c7130586ed8d824d7eab0975c2b70c8388fee433427"
+    },
+    {
+      "bytes": 689,
+      "path": "downstream/issue/metrics/in_abs_qwen3_32b.metrics.json",
+      "sha256": "ba495703d3a7b3314bd1658024803fa436c1ec43d569a9eb620ee9878ed9ddcd"
+    },
+    {
+      "bytes": 688,
+      "path": "downstream/issue/metrics/in_abs_saul54.metrics.json",
+      "sha256": "8908ce9440d3a279a82eb2a225179368b147ae839f3d84723b3456bb984d4e5e"
+    },
+    {
+      "bytes": 695,
+      "path": "downstream/issue/metrics/sc_jaccard.metrics.json",
+      "sha256": "ab8867b0a0b941d2e5feb0b9fad4d80bbfbd1d380a63ab17cb0855f90f5d54ed"
+    },
+    {
+      "bytes": 737,
+      "path": "downstream/issue/metrics/sc_mistral.metrics.json",
+      "sha256": "eaa12b07d4617490aca6d47d1df62308b4d8cd39adf5eb3fe743355811871191"
+    },
+    {
+      "bytes": 775,
+      "path": "downstream/issue/metrics/sc_mpnet.metrics.json",
+      "sha256": "dc093f5d1c2a65b3b377992ecd7615b23b22aed2989690590a006de7760a5d0c"
+    },
+    {
+      "bytes": 727,
+      "path": "downstream/issue/metrics/sc_qwen36.metrics.json",
+      "sha256": "eae6c1fdb90d377a633581967806b6882a4a325ee1cb0c258e39de103fc87952"
+    },
+    {
+      "bytes": 736,
+      "path": "downstream/issue/metrics/sc_qwen3_32b.metrics.json",
+      "sha256": "af8be0fe799f421bd56c046e74566cfa120e3947872f789b078869551caf56c8"
+    },
+    {
+      "bytes": 733,
+      "path": "downstream/issue/metrics/sc_saul54.metrics.json",
+      "sha256": "65d17e53d7bcfb3e0c8d951ed185e17b92e69bdbea456838721a681641d969bd"
+    },
+    {
+      "bytes": 45871,
+      "path": "downstream/issue/predictions/in_abs/jaccard.jsonl",
+      "sha256": "471cc990ddfb06a4c51eb9010eb6db2a0aa37c4c065933abd997c650be5b1b95"
+    },
+    {
+      "bytes": 53691,
+      "path": "downstream/issue/predictions/in_abs/mistral24.jsonl",
+      "sha256": "5282452ad67692d69075d59169c3684c1e71834e7f92a0cce45570e5cbc3cff6"
+    },
+    {
+      "bytes": 52974,
+      "path": "downstream/issue/predictions/in_abs/mpnet.jsonl",
+      "sha256": "0a1fc09476100be572470a3ed36be22e674a0dbdf798923d5a03286280ca4476"
+    },
+    {
+      "bytes": 69829,
+      "path": "downstream/issue/predictions/in_abs/qwen36.jsonl",
+      "sha256": "18c99fbc72d7e1a408ecd2c6615d2c1932f259c24c68b309b0392c475a26ec88"
+    },
+    {
+      "bytes": 60884,
+      "path": "downstream/issue/predictions/in_abs/qwen3_32b.jsonl",
+      "sha256": "e49a778bf92f996e9872111517e4267d10563f07ac6a2eb5aee777d4ba53e0d1"
+    },
+    {
+      "bytes": 33902,
+      "path": "downstream/issue/predictions/in_abs/saullm54.jsonl",
+      "sha256": "ff72f4689138c6d570b51ad523ce5aef8360bd2a94ddc5789a07ceba96e7dd3d"
+    },
+    {
+      "bytes": 603516,
+      "path": "downstream/issue/predictions/supreme_court/jaccard.jsonl",
+      "sha256": "4824a9e8a52c09fc9385ce856168ea47d93f0d4b6bf1fbc7ffbb6e6e4dc63b2b"
+    },
+    {
+      "bytes": 958815,
+      "path": "downstream/issue/predictions/supreme_court/mistral24.jsonl",
+      "sha256": "1dde1dba4147af9e5218fc9d4776267eeea749a9f870b881ad39228d0b6a63e4"
+    },
+    {
+      "bytes": 670373,
+      "path": "downstream/issue/predictions/supreme_court/mpnet.jsonl",
+      "sha256": "f783204fd5ebf3bd89f6256c0eae9bd9def0e9808e9b5cdcc91612304feb3d15"
+    },
+    {
+      "bytes": 1118254,
+      "path": "downstream/issue/predictions/supreme_court/qwen36.jsonl",
+      "sha256": "d536917b5f6075c0c0fb1d53b5024cdd8d64670b87ac3b21c7fd913476eacd7f"
+    },
+    {
+      "bytes": 1112881,
+      "path": "downstream/issue/predictions/supreme_court/qwen3_32b.jsonl",
+      "sha256": "a463984834d83f7fec5da581315237b336ed980ea638b8b55d67bf5f1c8a35bb"
+    },
+    {
+      "bytes": 472287,
+      "path": "downstream/issue/predictions/supreme_court/saullm54.jsonl",
+      "sha256": "ed15ab8ab13a0a4125c54ef82b16a532250cb14094d5edacb2ed4b3db874d88c"
+    },
+    {
+      "bytes": 6606,
+      "path": "downstream/ljp/in_abs/in_abs_binary_system_comparison.json",
+      "sha256": "c9e90c74854ae076ec4c591c5c4459ebe27ecea7d76726bb7c8f1bfcfc3322b4"
+    },
+    {
+      "bytes": 1824,
+      "path": "downstream/ljp/in_abs/in_abs_majority_vs_inlegalbert_s1.json",
+      "sha256": "939dd879404afe88bcdd8e45601ec5807b8c14da885bbf7e46c6ee89726216b1"
+    },
+    {
+      "bytes": 6736,
+      "path": "downstream/ljp/in_abs/in_abs_majority_vs_inlegalbert_seeds.json",
+      "sha256": "b10b558c38c7471ddedeebdc07eb3c4f61b552aa3895053faf1f8da45ab2fe54"
+    },
+    {
+      "bytes": 7014,
+      "path": "downstream/ljp/in_abs/in_abs_outcome_signal_audit.json",
+      "sha256": "687b53cb31afe1dad3bb7227b6863a26b2a2201bd7a116fb6930ec9680c47caa"
+    },
+    {
+      "bytes": 1024,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260604/metrics.json",
+      "sha256": "336cd99b37c2d7ae4e4f2d05c110546beeb5ded6271fb2e3f0ed589930f94382"
+    },
+    {
+      "bytes": 7524,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260604/per_case_metrics.jsonl",
+      "sha256": "51dd83482a950068ed0a6ea96a0c41f5bef988d419096ce5de2d5fd70f1be80b"
+    },
+    {
+      "bytes": 21971,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260604/predictions.jsonl",
+      "sha256": "b55a78e4d00bf1c1a6e51359124fbcb07d2e7a3be86a2d267d9d1bd8399a3b69"
+    },
+    {
+      "bytes": 1029,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260605/metrics.json",
+      "sha256": "262bcd993249668523f975fe3d7c7cf852acfd2b056bad689777e6fdb8e7287c"
+    },
+    {
+      "bytes": 7546,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260605/per_case_metrics.jsonl",
+      "sha256": "3b60c0dce91fa594797612e9acbc61f9ddb822ba311c2a3970dd8ff4f3171fe8"
+    },
+    {
+      "bytes": 21982,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260605/predictions.jsonl",
+      "sha256": "08fab35b4bbc000afec9b02c49196d92ea475e8fc07f64a611bb840517b0da92"
+    },
+    {
+      "bytes": 1026,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260606/metrics.json",
+      "sha256": "21d233f873ea30c29522620c129dd4e574ada11ce79767b147d6d16571cb9c31"
+    },
+    {
+      "bytes": 7548,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260606/per_case_metrics.jsonl",
+      "sha256": "a9e06fed575640d325f3577ea9713353c2a98733c4af4af0c1c2ea1a4c99e68b"
+    },
+    {
+      "bytes": 21987,
+      "path": "downstream/ljp/in_abs/inlegalbert/seed_20260606/predictions.jsonl",
+      "sha256": "7841a24591d40f9d951c5dc64b29a21c6402c83b43e2ec859995c954829d43d8"
+    },
+    {
+      "bytes": 2138,
+      "path": "downstream/ljp/in_abs/inlegalbert/summary.json",
+      "sha256": "4a0051e61a1583ee03c8cb6a69c2ea3087d9a236422f8ec241252819f0e978d5"
+    },
+    {
+      "bytes": 31933,
+      "path": "downstream/ljp/in_abs/mistral24.jsonl",
+      "sha256": "445f6084ca11e835755be2e873e595407413f730818161b5e04be6af0e36e4c5"
+    },
+    {
+      "bytes": 531,
+      "path": "downstream/ljp/in_abs/mistral24.metrics.json",
+      "sha256": "0b6808944556f4b4a8dd49a0b6a78f0f7f7ca857f3974d280e9fd4e51ab63bc2"
+    },
+    {
+      "bytes": 43320,
+      "path": "downstream/ljp/in_abs/qwen36.jsonl",
+      "sha256": "edd8360b24b0354edf5afaa473c441d5b0ee4a35a862f2c544533d1f5db893d6"
+    },
+    {
+      "bytes": 520,
+      "path": "downstream/ljp/in_abs/qwen36.metrics.json",
+      "sha256": "c4976227f450de10f9e6c30934689b8bb1dbccb75f78706e17b7a1784b35cc0c"
+    },
+    {
+      "bytes": 58185,
+      "path": "downstream/ljp/in_abs/saul7.jsonl",
+      "sha256": "7dfff78cb3416664f56d7af368e82a04a323473f7ae1135183d4d09b5fb93ae7"
+    },
+    {
+      "bytes": 518,
+      "path": "downstream/ljp/in_abs/saul7.metrics.json",
+      "sha256": "93b1348f60954b2b1e2c2d08a1bef674f5196f85bbd3b89645f98beb514ae8e0"
+    },
+    {
+      "bytes": 44775,
+      "path": "downstream/ljp/in_abs/saullm54.jsonl",
+      "sha256": "48385a2b83172a5115d23b952829cd6fd5a642395d7a2225b946f530ce64cc3d"
+    },
+    {
+      "bytes": 521,
+      "path": "downstream/ljp/in_abs/saullm54.metrics.json",
+      "sha256": "08be8993878e4932e03935184e78e1c1b339bbe3f09dbdf6c795a2742cc41a17"
+    },
+    {
+      "bytes": 5774,
+      "path": "downstream/ljp/in_abs/tfidf_lr/metrics.json",
+      "sha256": "9c35c688f70ea1ab4383cc4d8cdb4be594ebe16549a32935dc93e8c19a297532"
+    },
+    {
+      "bytes": 23630,
+      "path": "downstream/ljp/in_abs/tfidf_lr/predictions.jsonl",
+      "sha256": "8ec60dc231858103889ff474ef41538eb32bfbdadf3c86e8dd334aede22c5b36"
+    },
+    {
+      "bytes": 1057,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260604/metrics.json",
+      "sha256": "0d6dd00fedef4cb6fdd0d056430de78cf55ab78287c1764da0de0407e6a30254"
+    },
+    {
+      "bytes": 103384,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260604/per_case_metrics.jsonl",
+      "sha256": "bdfecad73280934eb966f903780d79001606b7225656de6e3a68d682fe3ad59a"
+    },
+    {
+      "bytes": 304263,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260604/predictions.jsonl",
+      "sha256": "db25ffe2e4c7cdd9fa882091b81fc499f6d35c816f26299afe21d532eec7b3a2"
+    },
+    {
+      "bytes": 1055,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260605/metrics.json",
+      "sha256": "4b78fca66e1ef6cc99fe624f6f628addfed563ce7f935bd296546c3ce738097f"
+    },
+    {
+      "bytes": 103374,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260605/per_case_metrics.jsonl",
+      "sha256": "9ee3370bc6addec52d2c38e3e4f475c6c7ca0517732175b9ad3fd914de6747a1"
+    },
+    {
+      "bytes": 304187,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260605/predictions.jsonl",
+      "sha256": "c362c1535f47dc0aa9f0981b25004ffe9579458d106cabb35cd44c6a80df7bfd"
+    },
+    {
+      "bytes": 1055,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260606/metrics.json",
+      "sha256": "55a3824919b8b19d2a59508bfd8ff4ce8f6b3eef5d91e72a723ea645052f1b24"
+    },
+    {
+      "bytes": 103452,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260606/per_case_metrics.jsonl",
+      "sha256": "bb2a0430a0aee9f7fd15456742b261a925f7ea9565053e9f2b254eb410acda0f"
+    },
+    {
+      "bytes": 304200,
+      "path": "downstream/ljp/supreme_court/inlegalbert/seed_20260606/predictions.jsonl",
+      "sha256": "36237350a11c05080d58d9b2e49b38665868e13d4fa4ba037b34e1c938d00c78"
+    },
+    {
+      "bytes": 2217,
+      "path": "downstream/ljp/supreme_court/inlegalbert/summary.json",
+      "sha256": "9644a111c7e727f5c10edf3508e8bf193a9fc461824e2f895eefe8b650f0e51c"
+    },
+    {
+      "bytes": 447177,
+      "path": "downstream/ljp/supreme_court/mistral24.jsonl",
+      "sha256": "55505076e9a656312cfa8336400b8159acad665b8c52cca1a119b4dd53502135"
+    },
+    {
+      "bytes": 556,
+      "path": "downstream/ljp/supreme_court/mistral24.metrics.json",
+      "sha256": "9514356fcf808c456210e9783e848b7301a7c2ed29f361b8b92256aabb1a050c"
+    },
+    {
+      "bytes": 622205,
+      "path": "downstream/ljp/supreme_court/qwen36.jsonl",
+      "sha256": "053d8476752bc318e562593b1a4e9e22fd524b8d59a4a09a1bf4d4b1dc32083d"
+    },
+    {
+      "bytes": 544,
+      "path": "downstream/ljp/supreme_court/qwen36.metrics.json",
+      "sha256": "dcb649d99ef191942a480509890854c4a1c371268be7b43ae5e30f632165a142"
+    },
+    {
+      "bytes": 747834,
+      "path": "downstream/ljp/supreme_court/saul7.jsonl",
+      "sha256": "e2bf900fe049dc598670290e486de3a2c750bb22e212d97fcd478a02f78382b6"
+    },
+    {
+      "bytes": 556,
+      "path": "downstream/ljp/supreme_court/saul7.metrics.json",
+      "sha256": "94a0ca573b704d2f101e09743ca1a3cfc6bb1479e31e56788a25251c316c9d42"
+    },
+    {
+      "bytes": 619001,
+      "path": "downstream/ljp/supreme_court/saullm54.jsonl",
+      "sha256": "b0b7a0c0e42918870722b65294039f9dd7cedcd60ffa1ad74aa60f2276daccac"
+    },
+    {
+      "bytes": 546,
+      "path": "downstream/ljp/supreme_court/saullm54.metrics.json",
+      "sha256": "af3318ba1d0271dee0059b6259ab15ec4d00e4c7c75015b83c47df3ce06e4f67"
+    },
+    {
+      "bytes": 6671,
+      "path": "downstream/ljp/supreme_court/sc_binary_system_comparison.json",
+      "sha256": "747344793be7a837bc1300511221d0faf0db5858ecba24b9fde4c253a9e62f72"
+    },
+    {
+      "bytes": 1856,
+      "path": "downstream/ljp/supreme_court/sc_majority_vs_inlegalbert_s1.json",
+      "sha256": "48833388703fb24c28776114dd62fef406cf9ee611df08e0669f39a3734a2909"
+    },
+    {
+      "bytes": 6823,
+      "path": "downstream/ljp/supreme_court/sc_majority_vs_inlegalbert_seeds.json",
+      "sha256": "fea0841fad905d83545b43bcebec4f6e20b40ace4abd1332a4e4dfcad15a520f"
+    },
+    {
+      "bytes": 7314,
+      "path": "downstream/ljp/supreme_court/sc_outcome_signal_audit.json",
+      "sha256": "181759f3be6d5660807f31ec16354e1895b9cdb80bb76602e1d3bb50e2a0fa42"
+    },
+    {
+      "bytes": 5872,
+      "path": "downstream/ljp/supreme_court/tfidf_lr/metrics.json",
+      "sha256": "59d069257439489d4ddf1f81c7ba97f55cf6ad2e33ef07269ae1a0391e775c20"
+    },
+    {
+      "bytes": 326831,
+      "path": "downstream/ljp/supreme_court/tfidf_lr/predictions.jsonl",
+      "sha256": "516c7b6127fdac4e7353bbe8d98518c54dea11ce4ae8767d919a6cebde35735b"
+    },
+    {
+      "bytes": 1071,
+      "path": "human/alignment.csv",
+      "sha256": "a6ac81eb4ae07c80b6f69980ac70f70e350859897d9736e8f5118cece77248fc"
+    },
+    {
+      "bytes": 315,
+      "path": "human/annotator_summary.csv",
+      "sha256": "d6b97aa87ab1f882ddf836400b5229569b3a691be27994f419659c856cec74b7"
+    },
+    {
+      "bytes": 70954,
+      "path": "human/assignment_manifest_sanitized.json",
+      "sha256": "e14823dc45c53c562c730d7decc172b8c9e5ad7979acb65c32ce96e72d1abdc3"
+    },
+    {
+      "bytes": 1859,
+      "path": "human/human_likert.csv",
+      "sha256": "eb1ef82d841751ea1bd529a357644ccb512bed7c8e6c2a7dc2368879e4be2f9f"
+    },
+    {
+      "bytes": 637328,
+      "path": "human/label_studio_round2_sanitized.json",
+      "sha256": "ac708b082763ed20bf1d3c96992806c54ca232e2c9dd0819450a48ddde7f9d26"
+    },
+    {
+      "bytes": 2462,
+      "path": "human/llm_likert.csv",
+      "sha256": "3dc1e134ffe14fc21148c5ce5df042efe7fa72a19d0749346efad282122807cf"
+    },
+    {
+      "bytes": 15039,
+      "path": "human/quality_tables.json",
+      "sha256": "3c4d431bb6dd62cd0ffba3578311c13b379f1e6f5051f851eece3dfafb4e4e5a"
+    },
+    {
+      "bytes": 4559,
+      "path": "human/quality_tables.tex",
+      "sha256": "6267afa6b0c3b2571d5abf6c75fd751c06941ddae01bd55a92a76118a9c6d97b"
+    },
+    {
+      "bytes": 2592,
+      "path": "human/report/agreement_table.csv",
+      "sha256": "388617612d36b6f946991b72e18ba7642a8f0270538befee0ee8c9d8e03b82e2"
+    },
+    {
+      "bytes": 12062,
+      "path": "human/report/annotations.csv",
+      "sha256": "0976f4b927ecbb3c30c9fc92c9d548cc1ccfa97b005c0799d1ef6aa03356bf3a"
+    },
+    {
+      "bytes": 318,
+      "path": "human/report/annotator_severity.csv",
+      "sha256": "8665f18a71171c5567fa8f0d9dcf29ec9a11f2c61e09deaf5085eb0583a23426"
+    },
+    {
+      "bytes": 80961,
+      "path": "human/report/case_scores.csv",
+      "sha256": "ba331cb658a13fdc145032f2d7fb2928bea000dacb369b8a74689a330e5c38be"
+    },
+    {
+      "bytes": 18030,
+      "path": "human/report/low_score_explanations.csv",
+      "sha256": "4fbebf0a9c6e3dfa72450532ba154c9cb54f74e8bef55f4d737a14b42bbbd02d"
+    },
+    {
+      "bytes": 915,
+      "path": "human/report/paper_tables.tex",
+      "sha256": "14bc869e483ecaeac64f08781a5b3cba4ddedd673053153d413e0f9d0575a259"
+    },
+    {
+      "bytes": 6053,
+      "path": "human/report/quality_table.csv",
+      "sha256": "7acfed75c3903cf865d456ac2200746aa680d8980603b954102fadc4706333cb"
+    },
+    {
+      "bytes": 671,
+      "path": "human/report/results_summary.md",
+      "sha256": "eda23e18987eadd5fcd5a3b109c1248503d321a6c3f98a5c41c49c6c6b53de13"
+    },
+    {
+      "bytes": 157196,
+      "path": "human/report/scores_long.csv",
+      "sha256": "3e87f1489a2bf9fbfdc8eebc7c44604a94e652375181d9a21db2ee62e36e4b84"
+    },
+    {
+      "bytes": 29330,
+      "path": "human/report/summary.json",
+      "sha256": "4be83e751ea05df9014db8967dc6205e0d8d14e3eed7e0f7a7170304be583db6"
+    },
+    {
+      "bytes": 3,
+      "path": "human/report/validation.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "bytes": 8892377,
+      "path": "llm_judge/in_abs.jsonl",
+      "sha256": "bcc39d9c02875668fb2dc13118cce5a88380c3238d8bbf7e7b8a6bfed4670c80"
+    },
+    {
+      "bytes": 48373126,
+      "path": "llm_judge/supreme_court.jsonl",
+      "sha256": "5917b596d28d6521e62ffd5d41902558ca1899ed6a29ea98cb60ff53b9b0b58f"
+    },
+    {
+      "bytes": 87615,
+      "path": "summarization/in_abs_test100_firac_headnote_l_capped_metrics.json",
+      "sha256": "7465fc76aa3e236f52ed73bef9580c0929806887a5d25b30cedbea37fef1aec2"
+    },
+    {
+      "bytes": 101408,
+      "path": "summarization/in_abs_test100_firac_headnote_l_capped_metrics_bertscore.json",
+      "sha256": "74606cfb780eb299385633735dc2c09469ce05b3ecff74ff7ce9fc2125ce6494"
+    },
+    {
+      "bytes": 966876,
+      "path": "summarization/in_abs_test100_firac_headnote_l_capped_predictions.jsonl",
+      "sha256": "1afed6bd4b226104d609138803ae1a274268d1befa283566e9eae2929cabe94f"
+    },
+    {
+      "bytes": 88818,
+      "path": "summarization/in_abs_test100_firac_headnote_metrics.json",
+      "sha256": "df2d87c494b2c869e1a8f6a5811ee00c0727ee4f9d485678fedc682981a35f8f"
+    },
+    {
+      "bytes": 102614,
+      "path": "summarization/in_abs_test100_firac_headnote_metrics_bertscore.json",
+      "sha256": "b6f7b14452942a094cbe19a0c9b593b176997d23cf274aca951ea6b4e0a773e4"
+    },
+    {
+      "bytes": 1164863,
+      "path": "summarization/in_abs_test100_firac_headnote_predictions.jsonl",
+      "sha256": "75837973f7fb5000de8ef92a7bd918670f0ae526507284ae0187976300638512"
+    }
+  ],
+  "root": "artifacts",
+  "schema_version": 1,
+  "total_bytes": 117622527
+}

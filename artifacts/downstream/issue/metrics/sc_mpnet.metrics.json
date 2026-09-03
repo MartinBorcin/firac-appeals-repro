@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "gold_issue_count": 1.5371269951422624,
+    "issue_avg_best_token_f1": 0.33649746920106294,
+    "issue_exact_f1": 0.0002775850104094379,
+    "issue_exact_precision": 0.00034698126301179735,
+    "issue_exact_recall": 0.0002313208420078649,
+    "issue_semantic_avg_best_cosine": 0.6107764630827285,
+    "issue_semantic_f1": 0.6092955774615386,
+    "issue_semantic_precision": 0.6122881279150535,
+    "issue_semantic_recall": 0.6092647982504035,
+    "predicted_issue_count": 1.5058986814712005
+  },
+  "count": 1441,
+  "predictions": "runs/evaluations/downstream/dense_retrieval/supreme_court/issue_generation.predictions.jsonl",
+  "references": "runs/evaluations/downstream/sc_test_temporal_20240701/issue_generation.jsonl",
+  "task": "issue_generation"
+}

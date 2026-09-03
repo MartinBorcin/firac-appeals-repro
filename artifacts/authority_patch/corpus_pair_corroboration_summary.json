@@ -1,0 +1,33 @@
+{
+  "by_focal_identifier_pattern": {
+    "absent_case:absent_citation": {
+      "corroborated_elsewhere": 1428,
+      "not_corroborated": 8267
+    },
+    "absent_case:empty_citation": {
+      "not_corroborated": 573
+    },
+    "absent_case:present_citation": {
+      "corroborated_elsewhere": 3099,
+      "not_corroborated": 12908
+    },
+    "empty_case:absent_citation": {
+      "not_corroborated": 6
+    },
+    "present_case:absent_citation": {
+      "corroborated_elsewhere": 2592,
+      "not_corroborated": 12858
+    }
+  },
+  "candidate_rules": 41731,
+  "corroboration": {
+    "corroborated_elsewhere": 7119,
+    "not_corroborated": 34612
+  },
+  "explicitly_supported_pair_types": 33461,
+  "limitations": [
+    "Corroboration establishes explicit co-occurrence elsewhere in this corpus, not authoritative legal correctness.",
+    "Lack of corroboration is not proof that an identifier is legally wrong.",
+    "Canonicalized exact pair matching is conservative and may miss aliases or OCR variants."
+  ]
+}

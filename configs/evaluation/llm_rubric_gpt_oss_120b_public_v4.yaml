@@ -1,0 +1,27 @@
+backend:
+  name: openai_compatible
+  base_url: "${OPENAI_BASE_URL}"
+  api_key_env: OPENAI_API_KEY
+  model: gpt-oss-120b
+  system_prompt: "Apply the supplied human legal-annotation rubric strictly. Use only the judgment, score each field independently, and return only the requested JSON."
+  timeout_seconds: 1800
+  temperature: 0
+  seed: 20260817
+  max_tokens: 4096
+  stream: true
+  extra_body: {"reasoning_effort": "medium"}
+scheduler:
+  max_case_concurrency: 2
+  max_in_flight_requests: 2
+  thread_pool_workers: 4
+  max_retries: 2
+  max_validation_retries: 2
+  retry_backoff_seconds: 10
+max_tokens: 4096
+overwrite: false
+continue_on_error: false
+log_level: INFO
+output:
+  artifact_store: sqlite
+  artifact_store_filename: artifacts.sqlite
+  write_case_files: false

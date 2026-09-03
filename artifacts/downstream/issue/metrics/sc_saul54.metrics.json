@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "gold_issue_count": 1.5371269951422624,
+    "issue_avg_best_token_f1": 0.4411040589907905,
+    "issue_exact_f1": 0.0,
+    "issue_exact_precision": 0.0,
+    "issue_exact_recall": 0.0,
+    "issue_semantic_avg_best_cosine": 0.7136140174641533,
+    "issue_semantic_f1": 0.7117703194358833,
+    "issue_semantic_precision": 0.729551150174624,
+    "issue_semantic_recall": 0.6976768847536826,
+    "predicted_issue_count": 1.0825815405968078
+  },
+  "count": 1441,
+  "predictions": "runs/evaluations/downstream/sc_test_zero_shot_binary_20260813/saullm_54b/issue_generation/predictions.jsonl",
+  "references": "runs/evaluations/downstream/sc_test_temporal_20240701/issue_generation.jsonl",
+  "task": "issue_generation"
+}

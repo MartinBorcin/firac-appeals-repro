@@ -1,0 +1,28 @@
+{
+  "aggregate": {
+    "gold_rule_count": 6.2,
+    "gold_rule_text_count": 6.2,
+    "predicted_rule_count": 5.99,
+    "predicted_rule_text_count": 6.01,
+    "rule_precision_at_1": 0.43,
+    "rule_precision_at_10": 0.15066269841269841,
+    "rule_precision_at_3": 0.26999999999999996,
+    "rule_precision_at_5": 0.18283333333333335,
+    "rule_recall_at_1": 0.0708932178932179,
+    "rule_recall_at_10": 0.14659992784992784,
+    "rule_recall_at_3": 0.13459992784992786,
+    "rule_recall_at_5": 0.14374278499278498,
+    "rule_reference_exact_matches": 0.89,
+    "rule_reference_f1": 0.14635024040287198,
+    "rule_reference_precision": 0.15255555555555556,
+    "rule_reference_recall": 0.14659992784992784,
+    "rule_text_avg_best_token_f1": 0.4841105710430011,
+    "rule_text_exact_f1": 0.14635024040287198,
+    "rule_text_exact_precision": 0.15255555555555556,
+    "rule_text_exact_recall": 0.14659992784992784
+  },
+  "count": 100,
+  "predictions": "runs/evaluations/downstream/zero_shot/qwen3_32b_reasoning/rule_recommendation/predictions.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test/rule_recommendation.jsonl",
+  "task": "rule_recommendation"
+}

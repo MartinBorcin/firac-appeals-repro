@@ -1,0 +1,28 @@
+{
+  "aggregate": {
+    "gold_rule_count": 6.2,
+    "gold_rule_text_count": 6.2,
+    "predicted_rule_count": 6.4,
+    "predicted_rule_text_count": 6.49,
+    "rule_precision_at_1": 0.47,
+    "rule_precision_at_10": 0.16832936507936508,
+    "rule_precision_at_3": 0.29,
+    "rule_precision_at_5": 0.20983333333333334,
+    "rule_recall_at_1": 0.08371464646464646,
+    "rule_recall_at_10": 0.18481854256854258,
+    "rule_recall_at_3": 0.15252886002886,
+    "rule_recall_at_5": 0.17529473304473303,
+    "rule_reference_exact_matches": 1.08,
+    "rule_reference_f1": 0.1721998001138868,
+    "rule_reference_precision": 0.17013997113997115,
+    "rule_reference_recall": 0.18481854256854258,
+    "rule_text_avg_best_token_f1": 0.4989030222195681,
+    "rule_text_exact_f1": 0.1721998001138868,
+    "rule_text_exact_precision": 0.17013997113997115,
+    "rule_text_exact_recall": 0.18481854256854258
+  },
+  "count": 100,
+  "predictions": "runs/evaluations/downstream/zero_shot/mistral_small_3_2_24b/rule_recommendation/predictions.jsonl",
+  "references": "runs/evaluations/downstream/in_abs_test/rule_recommendation.jsonl",
+  "task": "rule_recommendation"
+}

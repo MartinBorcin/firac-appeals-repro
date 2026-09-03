@@ -1,0 +1,140 @@
+<View>
+  <Style>
+    .firac-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+    .firac-pane { border: 1px solid #d7d7d7; border-radius: 7px; padding: 12px; max-height: 62vh; overflow: auto; background: #fff; }
+    .firac-pane h2, .firac-pane h3 { margin-top: 0; }
+    .firac-structured h3 { border-bottom: 1px solid #e6e6e6; padding-bottom: 4px; margin-top: 18px; }
+    .firac-structured .authority-list > li { margin-bottom: 12px; }
+    .firac-structured .authority-list ul { margin-top: 4px; }
+    .firac-structured .authority-list ul li { margin-bottom: 3px; }
+    .firac-meta { color: #555; font-size: 13px; margin-bottom: 8px; }
+    .rubric { margin-top: 18px; border-top: 2px solid #222; padding-top: 12px; background: #fff; }
+    .rubric-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .score-card { border: 1px solid #ddd; border-radius: 7px; padding: 12px; background: #fafafa; }
+    .score-card h3 { margin: 0 0 8px 0; }
+    .score-help { color: #555; font-size: 13px; margin: 2px 0 8px 0; }
+    .low-score-reason { margin: 8px 0 12px 0; padding: 8px; border-left: 3px solid #d97706; background: #fff8eb; }
+    .additional-comments { grid-column: 1 / -1; }
+    @media (max-width: 900px) { .firac-layout, .rubric-grid { grid-template-columns: 1fr; } .additional-comments { grid-column: auto; } }
+  </Style>
+
+  <View className="firac-meta">
+    <Text name="case_id_display" value="Case: $case_id | Source: $source_dataset | Split: $split | Model outcome: $outcome_label"/>
+  </View>
+
+  <View className="firac-layout">
+    <View className="firac-pane">
+      <Header value="Original Judgment"/>
+      <HyperText name="judgment" value="$judgment_html"/>
+    </View>
+    <View className="firac-pane firac-structured">
+      <Header value="Structured FIRAC Output"/>
+      <HyperText name="structured" value="$structured_html"/>
+    </View>
+  </View>
+
+  <View className="rubric">
+    <Header value="FIRAC Section Scores"/>
+    <Text name="scale" value="Score each dimension from 1 to 5. Hover over a score for its anchor. Selecting 1, 2, or 3 opens a required concise explanation field."/>
+
+    <View className="rubric-grid">
+      <View className="score-card">
+        <Header value="Facts"/>
+        <Text name="facts_faithfulness_q" value="Faithfulness/correctness: Are the facts grounded in the judgment, neutral, and free from the present appeal's reasoning or outcome? Deduct for unsupported facts, reversals, legal analysis, or outcome leakage."/>
+        <Choices name="facts_faithfulness" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="Unusable or mostly wrong; major fabrication, reversal, or pervasive outcome leakage."/><Choice value="2" hint="Serious grounding or leakage problems requiring substantial correction."/><Choice value="3" hint="Partly correct but with noticeable unsupported details, analysis, or outcome hints."/><Choice value="4" hint="Grounded and neutral with only minor support or wording issues."/><Choice value="5" hint="Fully grounded, neutral, and leakage-free."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="facts_faithfulness" whenChoiceValue="1,2,3">
+          <TextArea name="facts_faithfulness_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly explain what is wrong, unsupported, extra, or outcome-leaking." placeholder="Briefly identify the exact problem(s)."/>
+        </View>
+        <Text name="facts_coverage_q" value="Coverage/usefulness: Are the material factual and procedural inputs needed to understand the appeal included? Deduct for missing claims, events, procedural steps, or party positions."/>
+        <Choices name="facts_coverage" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="Misses most material facts and procedural history."/><Choice value="2" hint="Captures only a small portion of the necessary background."/><Choice value="3" hint="Captures the core background but omits noticeable material context."/><Choice value="4" hint="Covers nearly all important inputs, with minor omissions."/><Choice value="5" hint="Comprehensive and appropriately scoped for understanding the appeal."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="facts_coverage" whenChoiceValue="1,2,3">
+          <TextArea name="facts_coverage_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly identify the material facts or procedural context that are missing." placeholder="Briefly identify what is missing or insufficient."/>
+        </View>
+      </View>
+
+      <View className="score-card">
+        <Header value="Issues"/>
+        <Text name="issues_faithfulness_q" value="Faithfulness/correctness: Are the decisive legal questions stated accurately and at the correct procedural level? Deduct for unrelated, misstated, vague, or conclusion-like issues."/>
+        <Choices name="issues_faithfulness" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="Issues are unrelated to or contradict the judgment."/><Choice value="2" hint="Central questions are seriously misstated or framed at the wrong level."/><Choice value="3" hint="Main issue is partly captured but vague, broad, mixed with facts, or imprecise."/><Choice value="4" hint="Main deciding questions are accurate with minor imprecision."/><Choice value="5" hint="Decisive questions are stated precisely in the court's terms."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="issues_faithfulness" whenChoiceValue="1,2,3">
+          <TextArea name="issues_faithfulness_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly explain which issue is wrong, vague, extraneous, or misframed." placeholder="Briefly identify the exact issue-framing problem."/>
+        </View>
+        <Text name="issues_coverage_q" value="Coverage/usefulness: Are all and only the material deciding issues included at a useful granularity? Deduct for a missing decisive issue or distracting peripheral issues."/>
+        <Choices name="issues_coverage" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="Omits the central deciding issue."/><Choice value="2" hint="Includes mainly peripheral issues or misses most decisive questions."/><Choice value="3" hint="Includes the main issue but misses a material issue or sub-issue."/><Choice value="4" hint="Covers the decisive issues with only minor omissions."/><Choice value="5" hint="Covers all and only the material deciding issues at the right granularity."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="issues_coverage" whenChoiceValue="1,2,3">
+          <TextArea name="issues_coverage_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly identify the missing or extraneous issue(s)." placeholder="Briefly identify what is missing or unnecessary."/>
+        </View>
+      </View>
+
+      <View className="score-card">
+        <Header value="Rules / Authorities"/>
+        <Text name="rules_scope" value="This section is intentionally broad: it includes statutes, rules, constitutional provisions, regulations, precedents, doctrines, tests, standards, and other legally operative principles considered by the court."/>
+        <Text name="rules_faithfulness_q" value="Faithfulness/correctness: Are the authorities, principles, citations, precedent treatments, and relevance explanations grounded and accurate? Deduct for invented authorities, wrong citations or treatment, or overbroad rule statements."/>
+        <Choices name="rules_faithfulness" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="Authorities or principles are mostly fabricated, wrong, or misleading."/><Choice value="2" hint="Multiple serious citation, treatment, relevance, or rule-statement errors."/><Choice value="3" hint="Mostly grounded but with noticeable inaccuracies or unsupported authorities."/><Choice value="4" hint="Accurate with only minor citation, treatment, or wording issues."/><Choice value="5" hint="All listed authorities and principles are grounded and accurately described."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="rules_faithfulness" whenChoiceValue="1,2,3">
+          <TextArea name="rules_faithfulness_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly identify the incorrect authority, citation, treatment, principle, or relevance statement." placeholder="Briefly identify the exact authority-related error(s)."/>
+        </View>
+        <Text name="rules_coverage_q" value="Coverage/usefulness: Are the material authorities and legally operative principles needed to audit the court's reasoning included? Deduct for missing central provisions, precedents, doctrines, tests, or supporting authorities."/>
+        <Choices name="rules_coverage" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="Misses nearly all material authorities and principles."/><Choice value="2" hint="Captures only a few authorities and misses most material rules."/><Choice value="3" hint="Captures the main authority but omits important support, treatment, or relevance."/><Choice value="4" hint="Covers nearly all material authorities and principles."/><Choice value="5" hint="Comprehensively covers the material authorities and principles needed to audit the reasoning."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="rules_coverage" whenChoiceValue="1,2,3">
+          <TextArea name="rules_coverage_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly identify the missing material authority or principle." placeholder="Briefly identify what is missing."/>
+        </View>
+      </View>
+
+      <View className="score-card">
+        <Header value="Analysis"/>
+        <Text name="analysis_faithfulness_q" value="Faithfulness/correctness: Does the analysis accurately reconstruct the court's rule-to-fact reasoning? Deduct for invented reasoning, contradictions, unsupported inferences, or missing logical links."/>
+        <Choices name="analysis_faithfulness" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="Reasoning is invented or contradicts the judgment's logic."/><Choice value="2" hint="Major reasoning errors, unsupported inferences, or missing links."/><Choice value="3" hint="Broadly follows the judgment but has noticeable gaps or unsupported reasoning."/><Choice value="4" hint="Accurately tracks the reasoning with minor simplification."/><Choice value="5" hint="Faithfully and clearly reconstructs the court's reasoning process."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="analysis_faithfulness" whenChoiceValue="1,2,3">
+          <TextArea name="analysis_faithfulness_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly identify the incorrect, invented, or unsupported reasoning." placeholder="Briefly identify the exact reasoning problem(s)."/>
+        </View>
+        <Text name="analysis_coverage_q" value="Coverage/usefulness: Are the important intermediate reasoning steps present and auditable? Deduct for merely stating the result, skipped applications, or missing issue-level reasoning."/>
+        <Choices name="analysis_coverage" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="Provides little or no usable reasoning."/><Choice value="2" hint="States the result but misses most intermediate reasoning."/><Choice value="3" hint="Captures the main path but omits important steps or issue structure."/><Choice value="4" hint="Covers nearly all important reasoning steps."/><Choice value="5" hint="Complete, issue-organized, and auditable reasoning."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="analysis_coverage" whenChoiceValue="1,2,3">
+          <TextArea name="analysis_coverage_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly identify the missing reasoning step(s)." placeholder="Briefly identify what reasoning is missing."/>
+        </View>
+      </View>
+
+      <View className="score-card">
+        <Header value="Conclusion"/>
+        <Text name="conclusion_mapping" value="The simplified outcome label is intentionally coarse: partly allowed is labelled allowed. Judge detailed relief, remand, costs, qualifications, and mixed dispositions using the conclusion text and coverage score."/>
+        <Text name="conclusion_faithfulness_q" value="Faithfulness/correctness: Is the appeal result, relief, and simplified label correct? Deduct for a wrong broad outcome or materially misstated relief."/>
+        <Choices name="conclusion_faithfulness" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="The outcome is wrong."/><Choice value="2" hint="Outcome or relief is partly wrong or seriously misleading."/><Choice value="3" hint="Broad outcome is correct but important relief is missing or misstated."/><Choice value="4" hint="Outcome and relief are correct with minor wording issues."/><Choice value="5" hint="Exactly captures the result, relief/order, and simplified label."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="conclusion_faithfulness" whenChoiceValue="1,2,3">
+          <TextArea name="conclusion_faithfulness_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly identify the wrong outcome, relief, order, or label." placeholder="Briefly identify the exact conclusion error(s)."/>
+        </View>
+        <Text name="conclusion_coverage_q" value="Coverage/usefulness: Is the result concise but complete? Deduct for omitted partial relief, remand, costs, qualifications, directions, or multiple dispositions."/>
+        <Choices name="conclusion_coverage" toName="structured" choice="single-radio" showInline="true" required="true">
+          <Choice value="1" hint="No usable conclusion."/><Choice value="2" hint="Gives only a vague result."/><Choice value="3" hint="Gives the broad result but omits important qualifications or relief."/><Choice value="4" hint="Includes nearly all material result details."/><Choice value="5" hint="Concise, complete, and directly supported by the analysis."/>
+        </Choices>
+        <View className="low-score-reason" visibleWhen="choice-selected" whenTagName="conclusion_coverage" whenChoiceValue="1,2,3">
+          <TextArea name="conclusion_coverage_reason" toName="structured" rows="2" maxSubmissions="1" required="true" requiredMessage="Briefly identify the missing qualification, relief, direction, or disposition." placeholder="Briefly identify what result detail is missing."/>
+        </View>
+      </View>
+
+      <View className="score-card additional-comments">
+        <Header value="Additional comments (optional)"/>
+        <Text name="comments_help" value="Use this only for cross-section problems, poor source readability, or anything important not captured in a low-score explanation."/>
+        <TextArea name="reviewer_notes" toName="structured" rows="4" maxSubmissions="1" placeholder="Optional additional comments."/>
+      </View>
+    </View>
+  </View>
+</View>

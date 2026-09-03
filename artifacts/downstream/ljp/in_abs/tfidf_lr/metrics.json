@@ -1,0 +1,257 @@
+{
+  "accuracy": 0.6632653061224489,
+  "count": 98,
+  "macro_f1": 0.6629494528400208,
+  "mcc": 0.3260371702837261,
+  "prediction_distribution": {
+    "allowed": 47,
+    "dismissed": 51
+  },
+  "top_features": {
+    "allowed": [
+      {
+        "feature": "char:198",
+        "weight": -1.2101528121415783
+      },
+      {
+        "feature": "word:relying on",
+        "weight": -1.0903293560167047
+      },
+      {
+        "feature": "word:holding that",
+        "weight": -1.0897087205660283
+      },
+      {
+        "feature": "word:relying",
+        "weight": -0.9806365878723707
+      },
+      {
+        "feature": "char: 198",
+        "weight": -0.9794298565760224
+      },
+      {
+        "feature": "word:1982",
+        "weight": -0.9036287841909039
+      },
+      {
+        "feature": "word:detention",
+        "weight": -0.8489635685515393
+      },
+      {
+        "feature": "word:holding",
+        "weight": -0.7762742994299189
+      },
+      {
+        "feature": "word:respondent argued",
+        "weight": -0.7341513081336128
+      },
+      {
+        "feature": "word:respondents argued",
+        "weight": -0.7206085198884626
+      },
+      {
+        "feature": "word:counter",
+        "weight": -0.6765300059163685
+      },
+      {
+        "feature": "word:relief",
+        "weight": -0.6672545220391922
+      },
+      {
+        "feature": "word:without",
+        "weight": -0.6656167033973645
+      },
+      {
+        "feature": "word:decision in",
+        "weight": -0.634741429359394
+      },
+      {
+        "feature": "word:directing",
+        "weight": -0.6004068500075302
+      },
+      {
+        "feature": "word:default",
+        "weight": -0.5998591636756461
+      },
+      {
+        "feature": "word:the question",
+        "weight": -0.5987480579858627
+      },
+      {
+        "feature": "word:reasoning that",
+        "weight": -0.5917775200938736
+      },
+      {
+        "feature": "char:elyi",
+        "weight": -0.5832638474196725
+      },
+      {
+        "feature": "char:relyi",
+        "weight": -0.5832638474196725
+      },
+      {
+        "feature": "char:elyin",
+        "weight": -0.5832638474196725
+      },
+      {
+        "feature": "word:part of",
+        "weight": -0.5810658753562257
+      },
+      {
+        "feature": "word:action",
+        "weight": -0.579200140265881
+      },
+      {
+        "feature": "word:order in",
+        "weight": -0.5771109892038859
+      },
+      {
+        "feature": "word:civil court",
+        "weight": -0.5730149520978405
+      },
+      {
+        "feature": "word:reasoning",
+        "weight": -0.5648798674190176
+      },
+      {
+        "feature": "word:writ petition",
+        "weight": -0.5644321004467845
+      },
+      {
+        "feature": "word:continued",
+        "weight": -0.5619560454443495
+      },
+      {
+        "feature": "word:15",
+        "weight": -0.559848994505478
+      },
+      {
+        "feature": "word:disposal",
+        "weight": -0.5592914731862482
+      }
+    ],
+    "dismissed": [
+      {
+        "feature": "word:petitioner",
+        "weight": 1.8335188852970215
+      },
+      {
+        "feature": "word:the petitioner",
+        "weight": 1.7890164814044425
+      },
+      {
+        "feature": "word:appellant argued",
+        "weight": 1.3830114193487908
+      },
+      {
+        "feature": "word:arguing that",
+        "weight": 1.1842113568752446
+      },
+      {
+        "feature": "char:tione",
+        "weight": 1.1558333972397032
+      },
+      {
+        "feature": "word:leave petition",
+        "weight": 1.1554250736229672
+      },
+      {
+        "feature": "word:court contending",
+        "weight": 1.0944353423122617
+      },
+      {
+        "feature": "word:argued",
+        "weight": 1.0813815659463881
+      },
+      {
+        "feature": "word:argued that",
+        "weight": 1.055002643971304
+      },
+      {
+        "feature": "word:contending that",
+        "weight": 1.008381454481211
+      },
+      {
+        "feature": "word:filed special",
+        "weight": 0.9823765246672456
+      },
+      {
+        "feature": "word:contending",
+        "weight": 0.9643617276791806
+      },
+      {
+        "feature": "word:petitioner filed",
+        "weight": 0.9588802186019957
+      },
+      {
+        "feature": "word:arguing",
+        "weight": 0.9546674885417287
+      },
+      {
+        "feature": "char:rgu",
+        "weight": 0.9466307154358057
+      },
+      {
+        "feature": "char:argu",
+        "weight": 0.9418298046885597
+      },
+      {
+        "feature": "char: argu",
+        "weight": 0.9404680328939825
+      },
+      {
+        "feature": "char: arg",
+        "weight": 0.9381160617467842
+      },
+      {
+        "feature": "word:court of",
+        "weight": 0.9136869818338861
+      },
+      {
+        "feature": "word:12",
+        "weight": 0.8299576274477999
+      },
+      {
+        "feature": "word:appellants",
+        "weight": 0.826598707186757
+      },
+      {
+        "feature": "word:contended",
+        "weight": 0.7949698214249177
+      },
+      {
+        "feature": "word:the appellants",
+        "weight": 0.7928924990814123
+      },
+      {
+        "feature": "word:contended that",
+        "weight": 0.7802720571032383
+      },
+      {
+        "feature": "word:court found",
+        "weight": 0.7694269260040264
+      },
+      {
+        "feature": "char:onten",
+        "weight": 0.7661432049015173
+      },
+      {
+        "feature": "word:court decision",
+        "weight": 0.7590699910291109
+      },
+      {
+        "feature": "char:conte",
+        "weight": 0.7561519886214335
+      },
+      {
+        "feature": "char:onte",
+        "weight": 0.7553779163239974
+      },
+      {
+        "feature": "word:appellants argued",
+        "weight": 0.7435440145181497
+      }
+    ]
+  },
+  "train_count": 6877
+}

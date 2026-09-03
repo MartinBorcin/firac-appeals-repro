@@ -1,0 +1,1151 @@
+{
+  "agreement": {
+    "annotator_pairs": [
+      {
+        "annotator_pair": [
+          "A1",
+          "A2"
+        ],
+        "exact_agreement": 0.8,
+        "group": "A1-A2",
+        "krippendorff_alpha_ci95": [
+          -0.1182993628213988,
+          0.5545058540789081
+        ],
+        "krippendorff_alpha_ordinal": 0.17772795634289207,
+        "mean_absolute_difference": 0.27,
+        "n_cases": 10,
+        "n_pairs": 100,
+        "n_units": 100,
+        "within_one_agreement": 0.94
+      },
+      {
+        "annotator_pair": [
+          "A1",
+          "A3"
+        ],
+        "exact_agreement": 0.8,
+        "group": "A1-A3",
+        "krippendorff_alpha_ci95": [
+          0.18339536023606315,
+          0.8480546298554101
+        ],
+        "krippendorff_alpha_ordinal": 0.6427974344395051,
+        "mean_absolute_difference": 0.24,
+        "n_cases": 10,
+        "n_pairs": 100,
+        "n_units": 100,
+        "within_one_agreement": 0.96
+      },
+      {
+        "annotator_pair": [
+          "A2",
+          "A3"
+        ],
+        "exact_agreement": 0.79,
+        "group": "A2-A3",
+        "krippendorff_alpha_ci95": [
+          -0.02746404204305324,
+          0.48783269859478895
+        ],
+        "krippendorff_alpha_ordinal": 0.23960962545937914,
+        "mean_absolute_difference": 0.22,
+        "n_cases": 10,
+        "n_pairs": 100,
+        "n_units": 100,
+        "within_one_agreement": 0.99
+      }
+    ],
+    "groups": [
+      {
+        "exact_agreement": 0.7966666666666666,
+        "group": "overall",
+        "krippendorff_alpha_ci95": [
+          0.11993029047462339,
+          0.6286716611462676
+        ],
+        "krippendorff_alpha_ordinal": 0.4008901045122053,
+        "mean_absolute_difference": 0.24333333333333335,
+        "n_cases": 30,
+        "n_pairs": 300,
+        "n_units": 300,
+        "within_one_agreement": 0.9633333333333334
+      },
+      {
+        "exact_agreement": 0.8833333333333333,
+        "group": "facts",
+        "krippendorff_alpha_ci95": [
+          -0.09174311926605494,
+          0.7961781609195402
+        ],
+        "krippendorff_alpha_ordinal": 0.3613663663663663,
+        "mean_absolute_difference": 0.13333333333333333,
+        "n_cases": 30,
+        "n_pairs": 60,
+        "n_units": 60,
+        "within_one_agreement": 0.9833333333333333
+      },
+      {
+        "exact_agreement": 0.8333333333333334,
+        "group": "issues",
+        "krippendorff_alpha_ci95": [
+          -0.06273719126543631,
+          0.715223912420937
+        ],
+        "krippendorff_alpha_ordinal": 0.38838983050847464,
+        "mean_absolute_difference": 0.18333333333333332,
+        "n_cases": 30,
+        "n_pairs": 60,
+        "n_units": 60,
+        "within_one_agreement": 0.9833333333333333
+      },
+      {
+        "exact_agreement": 0.7,
+        "group": "rules",
+        "krippendorff_alpha_ci95": [
+          0.10793470963410545,
+          0.6688829702083134
+        ],
+        "krippendorff_alpha_ordinal": 0.43896710208030953,
+        "mean_absolute_difference": 0.36666666666666664,
+        "n_cases": 30,
+        "n_pairs": 60,
+        "n_units": 60,
+        "within_one_agreement": 0.9333333333333333
+      },
+      {
+        "exact_agreement": 0.7333333333333333,
+        "group": "analysis",
+        "krippendorff_alpha_ci95": [
+          0.064988607201075,
+          0.6218534443876266
+        ],
+        "krippendorff_alpha_ordinal": 0.3796395677103336,
+        "mean_absolute_difference": 0.31666666666666665,
+        "n_cases": 30,
+        "n_pairs": 60,
+        "n_units": 60,
+        "within_one_agreement": 0.9666666666666667
+      },
+      {
+        "exact_agreement": 0.8333333333333334,
+        "group": "conclusion",
+        "krippendorff_alpha_ci95": [
+          -0.10155508528921375,
+          0.7410728407908429
+        ],
+        "krippendorff_alpha_ordinal": 0.36954873101434627,
+        "mean_absolute_difference": 0.21666666666666667,
+        "n_cases": 30,
+        "n_pairs": 60,
+        "n_units": 60,
+        "within_one_agreement": 0.95
+      },
+      {
+        "exact_agreement": 0.9666666666666667,
+        "group": "facts_faithfulness",
+        "krippendorff_alpha_ci95": [
+          -0.0350877192982455,
+          1.0
+        ],
+        "krippendorff_alpha_ordinal": 0.6549707602339181,
+        "mean_absolute_difference": 0.03333333333333333,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 1.0
+      },
+      {
+        "exact_agreement": 0.8,
+        "group": "facts_coverage",
+        "krippendorff_alpha_ci95": [
+          -0.13461538461538458,
+          0.7020603610226251
+        ],
+        "krippendorff_alpha_ordinal": 0.23042328042328053,
+        "mean_absolute_difference": 0.23333333333333334,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 0.9666666666666667
+      },
+      {
+        "exact_agreement": 0.9666666666666667,
+        "group": "issues_faithfulness",
+        "krippendorff_alpha_ci95": [
+          -0.0350877192982455,
+          1.0
+        ],
+        "krippendorff_alpha_ordinal": 0.6549707602339181,
+        "mean_absolute_difference": 0.03333333333333333,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 1.0
+      },
+      {
+        "exact_agreement": 0.7,
+        "group": "issues_coverage",
+        "krippendorff_alpha_ci95": [
+          -0.15641025641025652,
+          0.6263986842105259
+        ],
+        "krippendorff_alpha_ordinal": 0.27016967706622885,
+        "mean_absolute_difference": 0.3333333333333333,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 0.9666666666666667
+      },
+      {
+        "exact_agreement": 0.8,
+        "group": "rules_faithfulness",
+        "krippendorff_alpha_ci95": [
+          0.32758036290043047,
+          0.9251346005882796
+        ],
+        "krippendorff_alpha_ordinal": 0.7074061249615267,
+        "mean_absolute_difference": 0.23333333333333334,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 0.9666666666666667
+      },
+      {
+        "exact_agreement": 0.6,
+        "group": "rules_coverage",
+        "krippendorff_alpha_ci95": [
+          -0.25247152122409994,
+          0.4849983823339248
+        ],
+        "krippendorff_alpha_ordinal": 0.12058723520010872,
+        "mean_absolute_difference": 0.5,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 0.9
+      },
+      {
+        "exact_agreement": 0.8333333333333334,
+        "group": "analysis_faithfulness",
+        "krippendorff_alpha_ci95": [
+          -0.0535714285714286,
+          0.8983363042186572
+        ],
+        "krippendorff_alpha_ordinal": 0.5922114261793024,
+        "mean_absolute_difference": 0.16666666666666666,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 1.0
+      },
+      {
+        "exact_agreement": 0.6333333333333333,
+        "group": "analysis_coverage",
+        "krippendorff_alpha_ci95": [
+          -0.22470924908424889,
+          0.5727753813910347
+        ],
+        "krippendorff_alpha_ordinal": 0.20671844871555656,
+        "mean_absolute_difference": 0.4666666666666667,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 0.9333333333333333
+      },
+      {
+        "exact_agreement": 0.9,
+        "group": "conclusion_faithfulness",
+        "krippendorff_alpha_ci95": [
+          -0.09259259259259256,
+          1.0
+        ],
+        "krippendorff_alpha_ordinal": 0.3996491228070176,
+        "mean_absolute_difference": 0.1,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 1.0
+      },
+      {
+        "exact_agreement": 0.7666666666666667,
+        "group": "conclusion_coverage",
+        "krippendorff_alpha_ci95": [
+          -0.134035759897829,
+          0.7458460139488671
+        ],
+        "krippendorff_alpha_ordinal": 0.3395095967599929,
+        "mean_absolute_difference": 0.3333333333333333,
+        "n_cases": 30,
+        "n_pairs": 30,
+        "n_units": 30,
+        "within_one_agreement": 0.9
+      }
+    ],
+    "notes": [
+      "Reliability is computed only on independently double-annotated cases.",
+      "Krippendorff alpha uses the ordinal distance derived from pooled category frequencies.",
+      "Intervals resample cases, preserving the ten correlated criterion ratings within each case.",
+      "Raw agreement is descriptive and can be inflated by the score-5 ceiling effect."
+    ]
+  },
+  "analysis": {
+    "bootstrap_replicates": 2000,
+    "confidence_interval": "case-clustered percentile bootstrap",
+    "score_scale": [
+      1,
+      5
+    ],
+    "seed": 20260817,
+    "unit_of_analysis": "case (annotators averaged within case)"
+  },
+  "annotator_severity": {
+    "notes": "Paired differences use only shared cases and are preferable to confounded marginal annotator means.",
+    "pairs": [
+      {
+        "ci95": [
+          -0.4302499999999998,
+          -0.040000000000000036
+        ],
+        "first_annotator": "A1",
+        "mean_paired_difference_first_minus_second": -0.21000000000000002,
+        "n_cases": 10,
+        "second_annotator": "A2"
+      },
+      {
+        "ci95": [
+          -0.2399999999999999,
+          0.12000000000000029
+        ],
+        "first_annotator": "A1",
+        "mean_paired_difference_first_minus_second": -0.019999999999999886,
+        "n_cases": 10,
+        "second_annotator": "A3"
+      },
+      {
+        "ci95": [
+          0.08999999999999977,
+          0.3099999999999999
+        ],
+        "first_annotator": "A2",
+        "mean_paired_difference_first_minus_second": 0.19999999999999982,
+        "n_cases": 10,
+        "second_annotator": "A3"
+      }
+    ]
+  },
+  "assignment_design": {
+    "completed_core_annotations": 150,
+    "completed_overlap_cases": 30,
+    "core_annotators": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "core_complete": true,
+    "covered_cases_by_stratum": [
+      {
+        "n_cases": 30,
+        "outcome": "allowed",
+        "source_dataset": "in_abs"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "dismissed",
+        "source_dataset": "in_abs"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "allowed",
+        "source_dataset": "supreme_court_vanga"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "dismissed",
+        "source_dataset": "supreme_court_vanga"
+      }
+    ],
+    "covered_core_cases": 120,
+    "missing_core_assignments": [],
+    "overlap_complete": true,
+    "planned_cases_by_stratum": [
+      {
+        "n_cases": 30,
+        "outcome": "allowed",
+        "source_dataset": "in_abs"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "dismissed",
+        "source_dataset": "in_abs"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "allowed",
+        "source_dataset": "supreme_court_vanga"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "dismissed",
+        "source_dataset": "supreme_court_vanga"
+      }
+    ],
+    "planned_core_annotations": 150,
+    "planned_core_cases": 120,
+    "planned_overlap_cases": 30
+  },
+  "coverage": {
+    "annotations": 150,
+    "annotations_by_annotator": {
+      "A1": 50,
+      "A2": 50,
+      "A3": 50
+    },
+    "case_annotation_multiplicity": {
+      "1": 90,
+      "2": 30
+    },
+    "cases_by_stratum": [
+      {
+        "n_cases": 30,
+        "outcome": "allowed",
+        "source_dataset": "in_abs"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "dismissed",
+        "source_dataset": "in_abs"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "allowed",
+        "source_dataset": "supreme_court_vanga"
+      },
+      {
+        "n_cases": 30,
+        "outcome": "dismissed",
+        "source_dataset": "supreme_court_vanga"
+      }
+    ],
+    "overlap_cases": 30,
+    "unique_cases": 120
+  },
+  "explanations": {
+    "annotations_with_additional_notes": 17,
+    "low_scores": 66,
+    "low_scores_by_criterion": {
+      "analysis_coverage": 6,
+      "analysis_faithfulness": 6,
+      "conclusion_coverage": 16,
+      "conclusion_faithfulness": 3,
+      "facts_coverage": 3,
+      "facts_faithfulness": 2,
+      "issues_coverage": 3,
+      "issues_faithfulness": 1,
+      "rules_coverage": 13,
+      "rules_faithfulness": 13
+    },
+    "low_scores_with_reason": 66,
+    "reason_completion_rate": 1.0
+  },
+  "provenance": {
+    "assignment_manifest": "artifacts/human/assignment_manifest_sanitized.json",
+    "assignment_manifest_sha256": "e14823dc45c53c562c730d7decc172b8c9e5ad7979acb65c32ce96e72d1abdc3",
+    "export_metadata": {
+      "annotation_count": 150,
+      "annotators": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "description": "Privacy-preserving FIRAC-Appeals round-2 human evaluation export",
+      "task_count": 200
+    },
+    "input_file": "artifacts/human/label_studio_round2_sanitized.json",
+    "input_sha256": "ac708b082763ed20bf1d3c96992806c54ca232e2c9dd0819450a48ddde7f9d26"
+  },
+  "quality": {
+    "annotator": [
+      {
+        "ceiling_rate": 0.762,
+        "ci95": [
+          4.468,
+          4.748
+        ],
+        "group": "A1",
+        "low_score_rate": 0.1,
+        "mean": 4.622,
+        "median_case_score": 4.8,
+        "n_cases": 50,
+        "n_ratings": 500,
+        "score_distribution": {
+          "1": 5,
+          "2": 10,
+          "3": 35,
+          "4": 69,
+          "5": 381
+        },
+        "sd_between_cases": 0.5167757181380941
+      },
+      {
+        "ceiling_rate": 0.968,
+        "ci95": [
+          4.942,
+          4.98
+        ],
+        "group": "A2",
+        "low_score_rate": 0.006,
+        "mean": 4.962,
+        "median_case_score": 5.0,
+        "n_cases": 50,
+        "n_ratings": 500,
+        "score_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 3,
+          "4": 13,
+          "5": 484
+        },
+        "sd_between_cases": 0.06966391622992349
+      },
+      {
+        "ceiling_rate": 0.782,
+        "ci95": [
+          4.658,
+          4.812
+        ],
+        "group": "A3",
+        "low_score_rate": 0.026,
+        "mean": 4.744,
+        "median_case_score": 4.8,
+        "n_cases": 50,
+        "n_ratings": 500,
+        "score_distribution": {
+          "1": 2,
+          "2": 2,
+          "3": 9,
+          "4": 96,
+          "5": 391
+        },
+        "sd_between_cases": 0.29008091763421845
+      }
+    ],
+    "balanced_strata": [
+      {
+        "ci95": [
+          4.716666666666667,
+          4.8341666666666665
+        ],
+        "group": "equal_weight_four_source_outcome_strata",
+        "mean": 4.7804166666666665,
+        "n_cases": 120,
+        "n_strata": 4
+      }
+    ],
+    "criterion": [
+      {
+        "ceiling_rate": 0.7666666666666667,
+        "ci95": [
+          4.608333333333333,
+          4.8125
+        ],
+        "group": "analysis_coverage",
+        "low_score_rate": 0.04,
+        "mean": 4.716666666666667,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 29,
+          "5": 115
+        },
+        "sd_between_cases": 0.5714985951493696
+      },
+      {
+        "ceiling_rate": 0.9,
+        "ci95": [
+          4.741666666666666,
+          4.937604166666666
+        ],
+        "group": "analysis_faithfulness",
+        "low_score_rate": 0.04,
+        "mean": 4.854166666666667,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 2,
+          "2": 1,
+          "3": 3,
+          "4": 9,
+          "5": 135
+        },
+        "sd_between_cases": 0.5702565887658049
+      },
+      {
+        "ceiling_rate": 0.76,
+        "ci95": [
+          4.4875,
+          4.7375
+        ],
+        "group": "conclusion_coverage",
+        "low_score_rate": 0.10666666666666667,
+        "mean": 4.616666666666666,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 2,
+          "2": 0,
+          "3": 14,
+          "4": 20,
+          "5": 114
+        },
+        "sd_between_cases": 0.7122379610532327
+      },
+      {
+        "ceiling_rate": 0.92,
+        "ci95": [
+          4.770833333333333,
+          4.954166666666667
+        ],
+        "group": "conclusion_faithfulness",
+        "low_score_rate": 0.02,
+        "mean": 4.879166666666666,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 2,
+          "2": 1,
+          "3": 0,
+          "4": 9,
+          "5": 138
+        },
+        "sd_between_cases": 0.5020790110464023
+      },
+      {
+        "ceiling_rate": 0.8266666666666667,
+        "ci95": [
+          4.704166666666667,
+          4.8625
+        ],
+        "group": "facts_coverage",
+        "low_score_rate": 0.02,
+        "mean": 4.7875,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 23,
+          "5": 124
+        },
+        "sd_between_cases": 0.45679970051057894
+      },
+      {
+        "ceiling_rate": 0.9266666666666666,
+        "ci95": [
+          4.795833333333333,
+          4.954166666666667
+        ],
+        "group": "facts_faithfulness",
+        "low_score_rate": 0.013333333333333334,
+        "mean": 4.8875,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 0,
+          "2": 2,
+          "3": 0,
+          "4": 9,
+          "5": 139
+        },
+        "sd_between_cases": 0.4465672053650638
+      },
+      {
+        "ceiling_rate": 0.8333333333333334,
+        "ci95": [
+          4.758333333333334,
+          4.895833333333333
+        ],
+        "group": "issues_coverage",
+        "low_score_rate": 0.02,
+        "mean": 4.833333333333333,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 3,
+          "4": 22,
+          "5": 125
+        },
+        "sd_between_cases": 0.3853042742476411
+      },
+      {
+        "ceiling_rate": 0.9466666666666667,
+        "ci95": [
+          4.883333333333334,
+          4.983333333333333
+        ],
+        "group": "issues_faithfulness",
+        "low_score_rate": 0.006666666666666667,
+        "mean": 4.9375,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 7,
+          "5": 142
+        },
+        "sd_between_cases": 0.27164686047646985
+      },
+      {
+        "ceiling_rate": 0.6933333333333334,
+        "ci95": [
+          4.433229166666667,
+          4.679166666666666
+        ],
+        "group": "rules_coverage",
+        "low_score_rate": 0.08666666666666667,
+        "mean": 4.5625,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 0,
+          "2": 3,
+          "3": 10,
+          "4": 33,
+          "5": 104
+        },
+        "sd_between_cases": 0.6877148251072307
+      },
+      {
+        "ceiling_rate": 0.8,
+        "ci95": [
+          4.620833333333334,
+          4.833333333333333
+        ],
+        "group": "rules_faithfulness",
+        "low_score_rate": 0.08666666666666667,
+        "mean": 4.729166666666667,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 150,
+        "score_distribution": {
+          "1": 0,
+          "2": 2,
+          "3": 11,
+          "4": 17,
+          "5": 120
+        },
+        "sd_between_cases": 0.617992933702678
+      }
+    ],
+    "dimension": [
+      {
+        "ceiling_rate": 0.776,
+        "ci95": [
+          4.6275,
+          4.780833333333334
+        ],
+        "group": "coverage",
+        "low_score_rate": 0.05466666666666667,
+        "mean": 4.703333333333333,
+        "median_case_score": 4.8,
+        "n_cases": 120,
+        "n_ratings": 750,
+        "score_distribution": {
+          "1": 3,
+          "2": 6,
+          "3": 32,
+          "4": 127,
+          "5": 582
+        },
+        "sd_between_cases": 0.431712114886826
+      },
+      {
+        "ceiling_rate": 0.8986666666666666,
+        "ci95": [
+          4.796645833333334,
+          4.908333333333333
+        ],
+        "group": "faithfulness",
+        "low_score_rate": 0.03333333333333333,
+        "mean": 4.8575,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 750,
+        "score_distribution": {
+          "1": 4,
+          "2": 6,
+          "3": 15,
+          "4": 51,
+          "5": 674
+        },
+        "sd_between_cases": 0.3234952235564933
+      }
+    ],
+    "outcome": [
+      {
+        "ceiling_rate": 0.85,
+        "ci95": [
+          4.746666666666667,
+          4.861666666666666
+        ],
+        "group": "allowed",
+        "low_score_rate": 0.031578947368421054,
+        "mean": 4.8075,
+        "median_case_score": 4.9,
+        "n_cases": 60,
+        "n_ratings": 760,
+        "score_distribution": {
+          "1": 0,
+          "2": 5,
+          "3": 19,
+          "4": 90,
+          "5": 646
+        },
+        "sd_between_cases": 0.24002559891726805
+      },
+      {
+        "ceiling_rate": 0.8243243243243243,
+        "ci95": [
+          4.636666666666667,
+          4.8425
+        ],
+        "group": "dismissed",
+        "low_score_rate": 0.05675675675675676,
+        "mean": 4.753333333333333,
+        "median_case_score": 4.9,
+        "n_cases": 60,
+        "n_ratings": 740,
+        "score_distribution": {
+          "1": 7,
+          "2": 7,
+          "3": 28,
+          "4": 88,
+          "5": 610
+        },
+        "sd_between_cases": 0.41750537058016013
+      }
+    ],
+    "overall": [
+      {
+        "ceiling_rate": 0.8373333333333334,
+        "ci95": [
+          4.714156249999999,
+          4.837083333333333
+        ],
+        "group": "overall",
+        "low_score_rate": 0.044,
+        "mean": 4.7804166666666665,
+        "median_case_score": 4.9,
+        "n_cases": 120,
+        "n_ratings": 1500,
+        "score_distribution": {
+          "1": 7,
+          "2": 12,
+          "3": 47,
+          "4": 178,
+          "5": 1256
+        },
+        "sd_between_cases": 0.34018629555917523
+      }
+    ],
+    "section": [
+      {
+        "ceiling_rate": 0.8333333333333334,
+        "ci95": [
+          4.685416666666667,
+          4.866666666666666
+        ],
+        "group": "analysis",
+        "low_score_rate": 0.04,
+        "mean": 4.785416666666666,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 300,
+        "score_distribution": {
+          "1": 3,
+          "2": 3,
+          "3": 6,
+          "4": 38,
+          "5": 250
+        },
+        "sd_between_cases": 0.5055322444118239
+      },
+      {
+        "ceiling_rate": 0.84,
+        "ci95": [
+          4.645833333333333,
+          4.829166666666667
+        ],
+        "group": "conclusion",
+        "low_score_rate": 0.06333333333333334,
+        "mean": 4.747916666666667,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 300,
+        "score_distribution": {
+          "1": 4,
+          "2": 1,
+          "3": 14,
+          "4": 29,
+          "5": 252
+        },
+        "sd_between_cases": 0.5190649249935343
+      },
+      {
+        "ceiling_rate": 0.8766666666666667,
+        "ci95": [
+          4.764583333333333,
+          4.902083333333334
+        ],
+        "group": "facts",
+        "low_score_rate": 0.016666666666666666,
+        "mean": 4.8375,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 300,
+        "score_distribution": {
+          "1": 0,
+          "2": 3,
+          "3": 2,
+          "4": 32,
+          "5": 263
+        },
+        "sd_between_cases": 0.3870948681845187
+      },
+      {
+        "ceiling_rate": 0.89,
+        "ci95": [
+          4.835416666666666,
+          4.93125
+        ],
+        "group": "issues",
+        "low_score_rate": 0.013333333333333334,
+        "mean": 4.885416666666667,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 300,
+        "score_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 4,
+          "4": 29,
+          "5": 267
+        },
+        "sd_between_cases": 0.26705645968795516
+      },
+      {
+        "ceiling_rate": 0.7466666666666667,
+        "ci95": [
+          4.55203125,
+          4.735416666666667
+        ],
+        "group": "rules",
+        "low_score_rate": 0.08666666666666667,
+        "mean": 4.645833333333333,
+        "median_case_score": 5.0,
+        "n_cases": 120,
+        "n_ratings": 300,
+        "score_distribution": {
+          "1": 0,
+          "2": 5,
+          "3": 21,
+          "4": 50,
+          "5": 224
+        },
+        "sd_between_cases": 0.5171261623502671
+      }
+    ],
+    "source_dataset": [
+      {
+        "ceiling_rate": 0.8186666666666667,
+        "ci95": [
+          4.615770833333333,
+          4.828333333333333
+        ],
+        "group": "in_abs",
+        "low_score_rate": 0.06266666666666666,
+        "mean": 4.733333333333333,
+        "median_case_score": 4.9,
+        "n_cases": 60,
+        "n_ratings": 750,
+        "score_distribution": {
+          "1": 7,
+          "2": 9,
+          "3": 31,
+          "4": 89,
+          "5": 614
+        },
+        "sd_between_cases": 0.4346893169378413
+      },
+      {
+        "ceiling_rate": 0.856,
+        "ci95": [
+          4.7758125,
+          4.8758333333333335
+        ],
+        "group": "supreme_court_vanga",
+        "low_score_rate": 0.025333333333333333,
+        "mean": 4.8275,
+        "median_case_score": 4.9,
+        "n_cases": 60,
+        "n_ratings": 750,
+        "score_distribution": {
+          "1": 0,
+          "2": 3,
+          "3": 16,
+          "4": 89,
+          "5": 642
+        },
+        "sd_between_cases": 0.1998781408419657
+      }
+    ],
+    "split": [
+      {
+        "ceiling_rate": 0.8369127516778524,
+        "ci95": [
+          4.7142752100840335,
+          4.8348844537815125
+        ],
+        "group": "test",
+        "low_score_rate": 0.04429530201342282,
+        "mean": 4.779411764705882,
+        "median_case_score": 4.9,
+        "n_cases": 119,
+        "n_ratings": 1490,
+        "score_distribution": {
+          "1": 7,
+          "2": 12,
+          "3": 47,
+          "4": 177,
+          "5": 1247
+        },
+        "sd_between_cases": 0.3414458145404603
+      },
+      {
+        "ceiling_rate": 0.9,
+        "ci95": [
+          4.9,
+          4.9
+        ],
+        "group": "train",
+        "low_score_rate": 0.0,
+        "mean": 4.9,
+        "median_case_score": 4.9,
+        "n_cases": 1,
+        "n_ratings": 10,
+        "score_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 9
+        },
+        "sd_between_cases": null
+      }
+    ],
+    "stratum": [
+      {
+        "ceiling_rate": 0.8605263157894737,
+        "ci95": [
+          4.705,
+          4.890041666666667
+        ],
+        "group": "in_abs|allowed",
+        "low_score_rate": 0.03684210526315789,
+        "mean": 4.806666666666667,
+        "median_case_score": 4.9,
+        "n_cases": 30,
+        "n_ratings": 380,
+        "score_distribution": {
+          "1": 0,
+          "2": 3,
+          "3": 11,
+          "4": 39,
+          "5": 327
+        },
+        "sd_between_cases": 0.2661129308282914
+      },
+      {
+        "ceiling_rate": 0.7756756756756756,
+        "ci95": [
+          4.444916666666667,
+          4.833333333333333
+        ],
+        "group": "in_abs|dismissed",
+        "low_score_rate": 0.0891891891891892,
+        "mean": 4.66,
+        "median_case_score": 4.8,
+        "n_cases": 30,
+        "n_ratings": 370,
+        "score_distribution": {
+          "1": 7,
+          "2": 6,
+          "3": 20,
+          "4": 50,
+          "5": 287
+        },
+        "sd_between_cases": 0.5499843257954627
+      },
+      {
+        "ceiling_rate": 0.8394736842105263,
+        "ci95": [
+          4.7283333333333335,
+          4.878333333333333
+        ],
+        "group": "supreme_court_vanga|allowed",
+        "low_score_rate": 0.02631578947368421,
+        "mean": 4.808333333333334,
+        "median_case_score": 4.9,
+        "n_cases": 30,
+        "n_ratings": 380,
+        "score_distribution": {
+          "1": 0,
+          "2": 2,
+          "3": 8,
+          "4": 51,
+          "5": 319
+        },
+        "sd_between_cases": 0.21539191758494453
+      },
+      {
+        "ceiling_rate": 0.8729729729729729,
+        "ci95": [
+          4.78,
+          4.908333333333333
+        ],
+        "group": "supreme_court_vanga|dismissed",
+        "low_score_rate": 0.024324324324324326,
+        "mean": 4.846666666666667,
+        "median_case_score": 4.9,
+        "n_cases": 30,
+        "n_ratings": 370,
+        "score_distribution": {
+          "1": 0,
+          "2": 1,
+          "3": 8,
+          "4": 38,
+          "5": 323
+        },
+        "sd_between_cases": 0.18473342085721575
+      }
+    ]
+  }
+}

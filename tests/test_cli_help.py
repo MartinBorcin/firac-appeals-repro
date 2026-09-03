@@ -12,9 +12,6 @@ COMMAND_MODULES = [
     "firac_appeals.cli.run_llm_eval",
     "firac_appeals.cli.score_predictions",
     "firac_appeals.cli.score_summaries",
-    "firac_appeals.cli.run_rubric",
-    "firac_appeals.cli.compare_rubric",
-    "firac_appeals.cli.make_results",
 ]
 
 

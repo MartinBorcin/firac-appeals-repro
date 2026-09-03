@@ -1,0 +1,18 @@
+{
+  "aggregate": {
+    "gold_issue_count": 1.5371269951422624,
+    "issue_avg_best_token_f1": 0.48675367725613733,
+    "issue_exact_f1": 0.0,
+    "issue_exact_precision": 0.0,
+    "issue_exact_recall": 0.0,
+    "issue_semantic_avg_best_cosine": 0.7066082429505322,
+    "issue_semantic_f1": 0.7038807349177258,
+    "issue_semantic_precision": 0.679421965009549,
+    "issue_semantic_recall": 0.7337945208915152,
+    "predicted_issue_count": 2.7265787647467037
+  },
+  "count": 1441,
+  "predictions": "runs/evaluations/downstream/sc_test_zero_shot_20260606/qwen3_32b_reasoning/issue_generation/predictions.jsonl",
+  "references": "runs/evaluations/downstream/sc_test_temporal_20240701/issue_generation.jsonl",
+  "task": "issue_generation"
+}
