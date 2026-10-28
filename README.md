@@ -139,3 +139,35 @@ rg -n -i '(hf\.space|/users/|/home/|\.ac\.uk)' \
 The text scans are safeguards rather than credential detectors; inspect any
 matches before publishing. Git history is handled separately as described in
 the anonymous review checklist.
+
+## Citation
+
+If you use FIRAC-Appeals, please cite our paper:
+
+Martin Borčin and Joemon M. Jose. 2026.
+[FIRAC-APPEALS: A Structured Indian Appellate Judgments Dataset for Summarisation and Reasoning-Aware Legal NLP](https://aclanthology.org/2026.nllp-1.36/).
+In *Proceedings of the Natural Legal Language Processing Workshop 2026*,
+pages 420–431, Budapest, Hungary. Association for Computational Linguistics.
+
+```bibtex
+@inproceedings{borcin-jose-2026-firac,
+    title = "{FIRAC}-{APPEALS}: A Structured {I}ndian Appellate Judgments Dataset for Summarisation and Reasoning-Aware Legal {NLP}",
+    author = "Bor{\v{c}}in, Martin  and
+      Jose, Joemon M.",
+    editor = "Aletras, Nikolaos  and
+      Chalkidis, Ilias  and
+      Barrett, Leslie  and
+      Goanț{\u{a}}, C{\u{a}}t{\u{a}}lina  and
+      Preoțiuc-Pietro, Daniel  and
+      Spanakis, Gerasimos  and
+      Xu, Shanshan",
+    booktitle = "Proceedings of the Natural Legal Language Processing Workshop 2026",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.nllp-1.36/",
+    pages = "420--431",
+    ISBN = "979-8-89176-494-1"
+}
+```
