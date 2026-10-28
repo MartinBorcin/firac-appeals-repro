@@ -1,8 +1,44 @@
 cff-version: 1.2.0
 title: "FIRAC Appeals Reproducibility Package"
-message: "If you use this code, please cite the FIRAC Appeals paper and dataset release."
+message: "If you use this code, please cite the FIRAC-Appeals paper below and attribute the dataset release."
 type: software
 authors:
-  - family-names: "FIRAC Appeals contributors"
+  - family-names: "Borčin"
+    given-names: "Martin"
+  - family-names: "Jose"
+    given-names: "Joemon M."
 version: 0.2.0
 license: MIT
+repository-code: "https://github.com/MartinBorcin/firac-appeals-repro"
+preferred-citation:
+  type: conference-paper
+  title: "FIRAC-APPEALS: A Structured Indian Appellate Judgments Dataset for Summarisation and Reasoning-Aware Legal NLP"
+  authors:
+    - family-names: "Borčin"
+      given-names: "Martin"
+    - family-names: "Jose"
+      given-names: "Joemon M."
+  editors:
+    - family-names: "Aletras"
+      given-names: "Nikolaos"
+    - family-names: "Chalkidis"
+      given-names: "Ilias"
+    - family-names: "Barrett"
+      given-names: "Leslie"
+    - family-names: "Goanță"
+      given-names: "Cătălina"
+    - family-names: "Preoțiuc-Pietro"
+      given-names: "Daniel"
+    - family-names: "Spanakis"
+      given-names: "Gerasimos"
+    - family-names: "Xu"
+      given-names: "Shanshan"
+  collection-title: "Proceedings of the Natural Legal Language Processing Workshop 2026"
+  year: 2026
+  month: 10
+  start: 420
+  end: 431
+  publisher:
+    name: "Association for Computational Linguistics"
+  isbn: "979-8-89176-494-1"
+  url: "https://aclanthology.org/2026.nllp-1.36/"
